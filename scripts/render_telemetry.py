@@ -58,7 +58,7 @@ CSS = """
 
 def panel(x: float, y: float, w: float, h: float, accent: str) -> str:
     return (
-        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="14" fill="url(#glass)" stroke="url(#edge)"/>'
+        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="14" fill="url(#glass)" stroke="#16263A" stroke-opacity=".55"/>'
         f'<rect x="{x}" y="{y}" width="{w}" height="2.5" rx="1.2" fill="{accent}" fill-opacity=".92"/>'
     )
 
@@ -75,7 +75,7 @@ def card_header(x: float, y: float, w: float, color: str, title: str, right: str
 
 def stat_tile(x: float, y: float, w: float, h: float, label: str, value: str, color: str) -> str:
     return (
-        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="9" fill="#080D13" stroke="#16263A" stroke-opacity=".75"/>'
+        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="9" fill="#080D13" stroke="#16263A" stroke-opacity=".6"/>'
         f'<rect x="{x}" y="{y}" width="2.5" height="{h - 16}" rx="1.2" fill="{color}" transform="translate(0 8)"/>'
         f'<text class="m" x="{x + 14}" y="{y + 19}" font-size="10" letter-spacing="1.3" fill="#7E93A8">{label}</text>'
         f'<text class="s" x="{x + 14}" y="{y + 43}" font-size="24" font-weight="800" fill="#EEF6FF">{value}</text>'
@@ -109,7 +109,7 @@ def streak_tile(
     # 3-digit streak does not collide with it.
     days_x = x + 18 + len(value_text) * 23.5 + 6
     return (
-        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="13" fill="url(#glassSoft)" stroke="#16263A"/>'
+        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="13" fill="url(#glassSoft)" stroke="#16263A" stroke-opacity=".55"/>'
         f'<rect x="{x}" y="{y}" width="{w}" height="2.5" rx="1.2" fill="{accent}" fill-opacity=".9"/>'
         f'<text class="m" x="{x + 18}" y="{y + 24}" font-size="10.5" letter-spacing="1.8" fill="#7E93A8">{label}</text>'
         f'<text class="s" x="{x + 18}" y="{y + 68}" font-size="42" font-weight="800" fill="#EEF6FF">{value_text}</text>'
@@ -212,7 +212,6 @@ def render() -> str:
     out.append('<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05080D"/><stop offset=".55" stop-color="#090F16"/><stop offset="1" stop-color="#05080D"/></linearGradient>')
     out.append('<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16263A" stop-opacity=".26"/><stop offset=".55" stop-color="#141F2C" stop-opacity=".55"/><stop offset="1" stop-color="#67C7EB" stop-opacity=".05"/></linearGradient>')
     out.append('<linearGradient id="glassSoft" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16263A" stop-opacity=".16"/><stop offset="1" stop-color="#67C7EB" stop-opacity=".04"/></linearGradient>')
-    out.append('<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9C7FF" stop-opacity=".5"/><stop offset=".45" stop-color="#16263A" stop-opacity=".35"/><stop offset="1" stop-color="#67C7EB" stop-opacity=".45"/></linearGradient>')
     out.append('<linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset=".55" stop-color="#A9C7FF"/><stop offset="1" stop-color="#67C7EB"/></linearGradient>')
     out.append('<linearGradient id="scanline" x1="0" x2="1"><stop offset="0" stop-color="#67C7EB" stop-opacity="0"/><stop offset=".5" stop-color="#67C7EB" stop-opacity=".12"/><stop offset="1" stop-color="#67C7EB" stop-opacity="0"/></linearGradient>')
     out.append('<linearGradient id="fadeL" x1="0" x2="1"><stop offset="0" stop-color="#05080D"/><stop offset="1" stop-color="#05080D" stop-opacity="0"/></linearGradient>')
@@ -244,7 +243,7 @@ def render() -> str:
 
     # tab strip
     out.append('<rect y="46" width="1280" height="42" fill="#070C12" fill-opacity=".9"/><rect y="87" width="1280" height="1" fill="#16263A"/>')
-    out.append('<rect x="20" y="53" width="92" height="25" rx="6" fill="#3B82F6" fill-opacity=".14" stroke="#16263A"/><rect x="20" y="76" width="92" height="2" fill="#A9C7FF"/>')
+    out.append('<rect x="20" y="53" width="92" height="25" rx="6" fill="#3B82F6" fill-opacity=".14" stroke="#16263A" stroke-opacity=".65"/><rect x="20" y="76" width="92" height="2" fill="#A9C7FF"/>')
     out.append('<text class="m" x="32" y="70" font-size="10.5" letter-spacing="1.4" fill="#EEF6FF">OVERVIEW</text>')
     out.append('<text class="m" x="128" y="70" font-size="10.5" letter-spacing="1.4" fill="#7E93A8">STREAKS</text>')
     out.append('<text class="m" x="206" y="70" font-size="10.5" letter-spacing="1.4" fill="#7E93A8">LANGUAGES</text>')
@@ -385,7 +384,7 @@ def render() -> str:
     out.append('<rect class="scanB" x="-180" y="46" width="180" height="574" fill="url(#scanline)"/>')
     out.append('<rect width="1280" height="680" fill="url(#scan)"/>')
     out.append("</g>")
-    out.append('<rect x=".5" y=".5" width="1279" height="679" rx="20" fill="none" stroke="#16263A"/>')
+    out.append('<rect x=".5" y=".5" width="1279" height="679" rx="20" fill="none" stroke="#16263A" stroke-opacity=".45"/>')
     out.append("</svg>")
     return "".join(out)
 

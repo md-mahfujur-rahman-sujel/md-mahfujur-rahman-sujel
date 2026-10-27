@@ -2,7 +2,6 @@
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05080D"/><stop offset=".55" stop-color="#090F16"/><stop offset="1" stop-color="#05080D"/></linearGradient>
 <linearGradient id="head" x1="0" x2="1"><stop offset="0" stop-color="#67C7EB"/><stop offset=".62" stop-color="#4F8DFF"/><stop offset="1" stop-color="#16263A"/></linearGradient>
-<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#67C7EB" stop-opacity=".8"/><stop offset=".5" stop-color="#16263A"/><stop offset="1" stop-color="#4F8DFF" stop-opacity=".35"/></linearGradient>
 <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16263A" stop-opacity=".20"/><stop offset="1" stop-color="#67C7EB" stop-opacity=".06"/></linearGradient>
 <linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#EEF6FF" stop-opacity="0"/><stop offset=".5" stop-color="#EEF6FF" stop-opacity=".35"/><stop offset="1" stop-color="#EEF6FF" stop-opacity="0"/></linearGradient>
 <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#67C7EB" stop-opacity="0"/><stop offset=".5" stop-color="#67C7EB" stop-opacity=".18"/><stop offset="1" stop-color="#67C7EB" stop-opacity="0"/></linearGradient>
@@ -43,7 +42,7 @@
 <circle cx="395" cy="160" r="4.5" fill="#67C7EB" filter="url(#glow)"/>
 <path d="M9 160h9M391 160h-9" stroke="#67C7EB" stroke-width="1.5" opacity=".6"/>
 
-<rect x="22" y="58" width="356" height="104" rx="10" fill="#080E15" stroke="#16263A"/>
+<rect x="22" y="58" width="356" height="104" rx="10" fill="#080E15" stroke="#16263A" stroke-opacity=".7"/>
 <g clip-path="url(#prev)">
 <text class="m" x="40" y="82" font-size="9" letter-spacing="1.4" fill="#7E93A8">LOCKED</text>
 <text class="s" x="40" y="104" font-size="16" font-weight="700" fill="#EEF6FF">12 apps</text>
@@ -63,8 +62,8 @@
 </g>
 
 <g fill="none" stroke-width="1.6">
-<path d="M104 140h20M104 146h12" stroke="#16263A"/>
-<path d="M276 140h20M284 146h12" stroke="#16263A"/>
+<path d="M104 140h20M104 146h12" stroke="#16263A" stroke-opacity=".7"/>
+<path d="M276 140h20M284 146h12" stroke="#16263A" stroke-opacity=".7"/>
 </g>
 <rect class="scany" style="--sy:6.5s" x="0" y="58" width="400" height="16" fill="url(#scan)"/>
 </g>
@@ -88,5 +87,5 @@
 <text class="s" x="68" y="292" font-size="13" font-weight="700" letter-spacing=".6" fill="#67C7EB">open repository</text>
 <g class="arrow"><path d="M346 287h12M352 282l5 5-5 5" fill="none" stroke="#67C7EB" stroke-width="1.8" stroke-linecap="round"/></g>
 </g>
-<rect x=".5" y=".5" width="399" height="319" rx="18" fill="none" stroke="#16263A"/>
+<rect x=".5" y=".5" width="399" height="319" rx="18" fill="none" stroke="#16263A" stroke-opacity=".45"/>
 </svg>

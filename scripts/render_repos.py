@@ -105,7 +105,6 @@ def render() -> str:
     out.append("<defs>")
     out.append('<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05080D"/><stop offset=".55" stop-color="#090F16"/><stop offset="1" stop-color="#05080D"/></linearGradient>')
     out.append('<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16263A" stop-opacity=".24"/><stop offset=".55" stop-color="#141F2C" stop-opacity=".5"/><stop offset="1" stop-color="#67C7EB" stop-opacity=".05"/></linearGradient>')
-    out.append('<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9C7FF" stop-opacity=".45"/><stop offset=".45" stop-color="#16263A" stop-opacity=".35"/><stop offset="1" stop-color="#67C7EB" stop-opacity=".4"/></linearGradient>')
     out.append('<linearGradient id="scanline" x1="0" x2="1"><stop offset="0" stop-color="#67C7EB" stop-opacity="0"/><stop offset=".5" stop-color="#67C7EB" stop-opacity=".09"/><stop offset="1" stop-color="#67C7EB" stop-opacity="0"/></linearGradient>')
     out.append('<radialGradient id="bloomBlue"><stop offset="0" stop-color="#3B82F6" stop-opacity=".2"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>')
     out.append('<radialGradient id="bloomMid"><stop offset="0" stop-color="#4F8DFF" stop-opacity=".14"/><stop offset="1" stop-color="#4F8DFF" stop-opacity="0"/></radialGradient>')
@@ -171,7 +170,7 @@ def render() -> str:
         updated = "PENDING" if repo["updated"] == "—" else repo["updated"].upper()
         out.append(
             f'<g class="rise" style="animation-delay:{0.08 * index:.2f}s">'
-            f'<rect x="{ROW_X}" y="{y}" width="{ROW_W}" height="{ROW_H}" rx="12" fill="url(#glass)" stroke="#16263A" stroke-opacity=".8"/>'
+            f'<rect x="{ROW_X}" y="{y}" width="{ROW_W}" height="{ROW_H}" rx="12" fill="url(#glass)" stroke="#16263A" stroke-opacity=".6"/>'
             f'<rect x="{ROW_X}" y="{y + 12}" width="3" height="{ROW_H - 24}" rx="1.5" fill="{accent}"/>'
             f'<rect x="{ROW_X}" y="{y}" width="{ROW_W}" height="1.5" rx=".75" fill="{accent}" fill-opacity=".55"/>'
             f'<text class="m" x="{ROW_X + 22}" y="{y + 35}" font-size="11.5" fill="{accent}">{repo["node"]}</text>'
@@ -206,7 +205,7 @@ def render() -> str:
 
     out.append(f'<rect width="{W}" height="{H}" fill="url(#scan)"/>')
     out.append("</g>")
-    out.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="20" fill="none" stroke="#16263A"/>')
+    out.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="20" fill="none" stroke="#16263A" stroke-opacity=".45"/>')
     out.append("</svg>")
     return "".join(out)
 

@@ -132,7 +132,6 @@ def render() -> str:
     )
     out.append("<defs>")
     out.append('<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05080D"/><stop offset=".55" stop-color="#090F16"/><stop offset="1" stop-color="#05080D"/></linearGradient>')
-    out.append('<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9C7FF" stop-opacity=".45"/><stop offset=".45" stop-color="#16263A" stop-opacity=".35"/><stop offset="1" stop-color="#67C7EB" stop-opacity=".4"/></linearGradient>')
     out.append('<linearGradient id="scanline" x1="0" x2="1"><stop offset="0" stop-color="#67C7EB" stop-opacity="0"/><stop offset=".5" stop-color="#67C7EB" stop-opacity=".08"/><stop offset="1" stop-color="#67C7EB" stop-opacity="0"/></linearGradient>')
     out.append('<radialGradient id="bloomBlue"><stop offset="0" stop-color="#3B82F6" stop-opacity=".18"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>')
     out.append('<radialGradient id="bloomCyan"><stop offset="0" stop-color="#67C7EB" stop-opacity=".12"/><stop offset="1" stop-color="#67C7EB" stop-opacity="0"/></radialGradient>')
@@ -159,7 +158,7 @@ def render() -> str:
 
     # tab strip
     out.append('<rect y="46" width="1280" height="42" fill="#070C12" fill-opacity=".9"/><rect y="87" width="1280" height="1" fill="#16263A"/>')
-    out.append('<rect x="20" y="53" width="116" height="25" rx="6" fill="#3B82F6" fill-opacity=".14" stroke="#16263A"/><rect x="20" y="76" width="116" height="2" fill="#A9C7FF"/>')
+    out.append('<rect x="20" y="53" width="116" height="25" rx="6" fill="#3B82F6" fill-opacity=".14" stroke="#16263A" stroke-opacity=".65"/><rect x="20" y="76" width="116" height="2" fill="#A9C7FF"/>')
     out.append('<text class="m" x="78" y="70" text-anchor="middle" font-size="10.5" letter-spacing="1.4" fill="#EEF6FF">PUBLIC FEED</text>')
     out.append(f'<text class="m" x="156" y="70" font-size="10.5" letter-spacing="1.4" fill="#7E93A8">EVENTS {len(rows):02d}</text>')
     out.append('<text class="m" x="252" y="70" font-size="10.5" letter-spacing="1.4" fill="#7E93A8">RAW JSON</text>')
@@ -219,7 +218,7 @@ def render() -> str:
 
     out.append(f'<rect width="{W}" height="{H}" fill="url(#scan)"/>')
     out.append("</g>")
-    out.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="20" fill="none" stroke="#16263A"/>')
+    out.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="20" fill="none" stroke="#16263A" stroke-opacity=".45"/>')
     out.append("</svg>")
     return "".join(out)
 
