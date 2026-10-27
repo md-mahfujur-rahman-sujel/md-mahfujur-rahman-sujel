@@ -1,72 +1,68 @@
 <div align="center">
 
-<img src="./assets/hero-v2.svg" width="100%" alt="Md Mahfujur Rahman Sujel — BSc in CSE at East West University" />
+<img src="./assets/hero-v4.svg" width="100%" alt="Md Mahfujur Rahman Sujel — BSc in Computer Science & Engineering at East West University" />
 
-[**LinkedIn**](https://linkedin.com/in/md-mahfujur-rahman-sujel) &nbsp;·&nbsp; [**GitHub**](https://github.com/md-mahfujur-rahman-sujel) &nbsp;·&nbsp; [**Apex Arcade**](https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade) &nbsp;·&nbsp; [**Unrot**](https://github.com/md-mahfujur-rahman-sujel/Unrot)
+<br />
 
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-3B82F6?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/md-mahfujur-rahman-sujel)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-16263A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/md-mahfujur-rahman-sujel)
+[![Apex Arcade](https://img.shields.io/badge/Apex_Arcade-Repo-4F8DFF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade)
+[![Unrot](https://img.shields.io/badge/Unrot-Repo-67C7EB?style=for-the-badge&logo=github&logoColor=black)](https://github.com/md-mahfujur-rahman-sujel/Unrot)
+
+<img src="./assets/divider-v4.svg" width="100%" alt="" />
 
 </div>
 
-```text
-$ whoami
-md-mahfujur-rahman-sujel
+## About
 
-$ cat about.txt
-BSc in Computer Science & Engineering, East West University, Bangladesh.
-I turn product ideas into working systems: from the first sketch in Figma
-to a shipped, polished release.
-```
+BSc in Computer Science & Engineering at East West University, Bangladesh. I turn product ideas into working systems: from the first sketch in Figma to a shipped, polished release.
 
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
+<img src="./assets/divider-v4.svg" width="100%" alt="" />
 
-## `> projects --list`
+## Projects
 
 <p align="center">
-<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><img src="./assets/project-apex-v2.svg" width="32%" alt="Apex Arcade" /></a>
-<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><img src="./assets/project-unrot-v2.svg" width="32%" alt="Unrot" /></a>
-<a href="https://github.com/masum-mir/Oppzy"><img src="./assets/project-oppzy-v2.svg" width="32%" alt="Oppzy" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><img src="./assets/project-apex-v4.svg" width="32%" alt="Apex Arcade — React launcher for 50 browser games" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><img src="./assets/project-unrot-v4.svg" width="32%" alt="Unrot — Android app blocker with a focus timer" /></a>
+<a href="https://github.com/masum-mir/Oppzy"><img src="./assets/project-oppzy-v4.svg" width="32%" alt="Oppzy — internship and research matching platform" /></a>
 </p>
 
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
+<img src="./assets/divider-v4.svg" width="100%" alt="" />
 
-## `> stack --load`
+## Stack
 
-<img src="./assets/stack-v2.svg" width="100%" alt="JavaScript, TypeScript, HTML, CSS, Java, Spring Boot, React, Bootstrap, MySQL, Git, GitHub, Android Studio, Figma" />
+<img src="./assets/stack-v4.svg" width="100%" alt="JavaScript, TypeScript, React, HTML, CSS, Bootstrap, Figma, Java, Spring Boot, MySQL, Kotlin, Git, GitHub, Android Studio, UI/UX" />
 
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
+<img src="./assets/divider-v4.svg" width="100%" alt="" />
 
-## `> telemetry --live`
+## Telemetry
+
+<img src="./assets/telemetry.svg" width="100%" alt="Live GitHub telemetry: contributions, streaks, active days and languages by bytes" />
+
+<img src="./assets/divider-v4.svg" width="100%" alt="" />
+
+## Repositories
+
+<img src="./assets/repos.svg" width="100%" alt="Repository index with live metadata for Apex Arcade, Unrot and Oppzy" />
 
 <p align="center">
-<img width="49%" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=md-mahfujur-rahman-sujel&show_icons=true&hide_border=true&card_width=495&custom_title=Mission%20Stats&bg_color=07090d&title_color=f5c518&icon_color=e62429&text_color=e5e7eb&ring_color=4dd0ff" />
-<img width="49%" alt="Contribution streak" src="https://streak-stats.demolab.com?user=md-mahfujur-rahman-sujel&hide_border=true&background=07090d&ring=e62429&fire=f5c518&currStreakLabel=4dd0ff&currStreakNum=e5e7eb&sideNums=e5e7eb&sideLabels=f5c518&dates=94a3b8" />
+<sub>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><b>Apex-Arcade</b></a> ·
+<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><b>Unrot</b></a> ·
+<a href="https://github.com/masum-mir/Oppzy"><b>Oppzy</b></a>
+</sub>
 </p>
+
+<img src="./assets/divider-v4.svg" width="100%" alt="" />
+
+## Activity stream
+
+<img src="./assets/activity.svg" width="100%" alt="Recent public GitHub activity feed" />
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/md-mahfujur-rahman-sujel/md-mahfujur-rahman-sujel/output/snake.svg" width="100%" alt="Contribution snake" />
+<sub><a href="https://github.com/md-mahfujur-rahman-sujel">full contribution graph on GitHub ↗</a></sub>
 </p>
 
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
+<img src="./assets/divider-v4.svg" width="100%" alt="" />
 
-## `> pinned --repos`
-
-<p align="center">
-<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><img width="32%" alt="Apex Arcade" src="https://github-readme-stats.vercel.app/api/pin/?username=md-mahfujur-rahman-sujel&repo=Apex-Arcade&hide_border=true&bg_color=07090d&title_color=f5c518&icon_color=e62429&text_color=e5e7eb" /></a>
-<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><img width="32%" alt="Unrot" src="https://github-readme-stats.vercel.app/api/pin/?username=md-mahfujur-rahman-sujel&repo=Unrot&hide_border=true&bg_color=07090d&title_color=f5c518&icon_color=e62429&text_color=e5e7eb" /></a>
-<a href="https://github.com/masum-mir/Oppzy"><img width="32%" alt="Oppzy" src="https://github-readme-stats.vercel.app/api/pin/?username=masum-mir&repo=Oppzy&hide_border=true&bg_color=07090d&title_color=f5c518&icon_color=e62429&text_color=e5e7eb" /></a>
-</p>
-
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
-
-## `> tail -f activity.log`
-
-<!--START_ACTIVITY-->
-```text
-booting activity log...
-```
-<!--END_ACTIVITY-->
-
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
-
-<div align="center"><sub><code>SYS ONLINE · READY FOR NEW MISSIONS</code></sub></div>
+<div align="center"><sub>East West University · Bangladesh · <a href="https://github.com/md-mahfujur-rahman-sujel">github.com/md-mahfujur-rahman-sujel</a></sub></div>
