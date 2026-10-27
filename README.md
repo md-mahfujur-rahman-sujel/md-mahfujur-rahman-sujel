@@ -2,8 +2,7 @@
 
 <img src="./assets/hero-v2.svg" width="100%" alt="Md Mahfujur Rahman Sujel — BSc in CSE at East West University" />
 
-[**LinkedIn**](https://linkedin.com/in/md-mahfujur-rahman-sujel) &nbsp;·&nbsp; [**GitHub**](https://github.com/md-mahfujur-rahman-sujel) &nbsp;·&nbsp; [**Apex Arcade**](https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade) &nbsp;·&nbsp; [**Unrot**](https://github.com/md-mahfujur-rahman-sujel/Unrot)
-
+[**LinkedIn**](https://linkedin.com/in/md-mahfujur-rahman-sujel) &nbsp;·&nbsp; [**GitHub**](https://github.com/md-mahfujur-rahman-sujel)
 <img src="./assets/divider-v2.svg" width="100%" alt="" />
 
 </div>
