@@ -8,18 +8,6 @@
 
 </div>
 
-```text
-$ whoami
-md-mahfujur-rahman-sujel
-
-$ cat about.txt
-BSc in Computer Science & Engineering, East West University, Bangladesh.
-I turn product ideas into working systems: from the first sketch in Figma
-to a shipped, polished release.
-```
-
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
-
 ## `> projects --list`
 
 <p align="center">
@@ -46,27 +34,6 @@ to a shipped, polished release.
 <p align="center">
 <img src="https://raw.githubusercontent.com/md-mahfujur-rahman-sujel/md-mahfujur-rahman-sujel/output/snake.svg" width="100%" alt="Contribution snake" />
 </p>
-
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
-
-## `> pinned --repos`
-
-<p align="center">
-<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><img width="32%" alt="Apex Arcade" src="https://github-readme-stats.vercel.app/api/pin/?username=md-mahfujur-rahman-sujel&repo=Apex-Arcade&hide_border=true&bg_color=07090d&title_color=f5c518&icon_color=e62429&text_color=e5e7eb" /></a>
-<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><img width="32%" alt="Unrot" src="https://github-readme-stats.vercel.app/api/pin/?username=md-mahfujur-rahman-sujel&repo=Unrot&hide_border=true&bg_color=07090d&title_color=f5c518&icon_color=e62429&text_color=e5e7eb" /></a>
-<a href="https://github.com/masum-mir/Oppzy"><img width="32%" alt="Oppzy" src="https://github-readme-stats.vercel.app/api/pin/?username=masum-mir&repo=Oppzy&hide_border=true&bg_color=07090d&title_color=f5c518&icon_color=e62429&text_color=e5e7eb" /></a>
-</p>
-
-<img src="./assets/divider-v2.svg" width="100%" alt="" />
-
-## `> tail -f activity.log`
-
-<!--START_ACTIVITY-->
-```text
-2026-10-26  pushed 0 commit(s) to md-mahfujur-rahman-sujel/md-mahfujur-rahman-sujel
-2026-10-26  created branch in md-mahfujur-rahman-sujel/md-mahfujur-rahman-sujel
-```
-<!--END_ACTIVITY-->
 
 <img src="./assets/divider-v2.svg" width="100%" alt="" />
 
