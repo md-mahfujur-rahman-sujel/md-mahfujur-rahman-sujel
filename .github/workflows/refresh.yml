@@ -58,5 +58,10 @@ jobs:
         if: steps.commit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run pages.yml --ref main
+        run: |
+          if gh api "repos/${{ github.repository }}/pages" >/dev/null 2>&1; then
+            gh workflow run pages.yml --ref main
+          else
+            echo "Pages is not enabled for this repository; skipping redeploy"
+          fi
 
