@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 72" role="img" aria-label="Tech stack: JavaScript, TypeScript, HTML, CSS, Java, Spring Boot, React, Bootstrap, MySQL, Git, GitHub, Android Studio, Figma">
+<defs>
+<clipPath id="c"><rect width="1280" height="72" rx="14"/></clipPath>
+<linearGradient id="fl" x1="0" x2="1"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></linearGradient>
+<linearGradient id="fr" x1="1" x2="0"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></linearGradient>
+<style>
+.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace;font-size:14px;fill:#e5e7eb}
+.row{animation:slide 30s linear infinite}
+@keyframes slide{to{transform:translateX(-1547px)}}
+@media (prefers-reduced-motion:reduce){.row{animation:none}}
+</style>
+<g id="items">
+<rect x="0" y="16" width="132" height="40" rx="6" fill="#0d1118" stroke="#e62429" stroke-opacity=".7"/><text class="m" x="66" y="41" text-anchor="middle">JavaScript</text>
+<rect x="148" y="16" width="132" height="40" rx="6" fill="#0d1118" stroke="#f5c518" stroke-opacity=".7"/><text class="m" x="214" y="41" text-anchor="middle">TypeScript</text>
+<rect x="296" y="16" width="77" height="40" rx="6" fill="#0d1118" stroke="#4dd0ff" stroke-opacity=".7"/><text class="m" x="334" y="41" text-anchor="middle">HTML</text>
+<rect x="388.8" y="16" width="68" height="40" rx="6" fill="#0d1118" stroke="#e62429" stroke-opacity=".7"/><text class="m" x="423" y="41" text-anchor="middle">CSS</text>
+<rect x="472.4" y="16" width="77" height="40" rx="6" fill="#0d1118" stroke="#f5c518" stroke-opacity=".7"/><text class="m" x="511" y="41" text-anchor="middle">Java</text>
+<rect x="565.2" y="16" width="141" height="40" rx="6" fill="#0d1118" stroke="#4dd0ff" stroke-opacity=".7"/><text class="m" x="636" y="41" text-anchor="middle">Spring Boot</text>
+<rect x="722.4" y="16" width="86" height="40" rx="6" fill="#0d1118" stroke="#e62429" stroke-opacity=".7"/><text class="m" x="765" y="41" text-anchor="middle">React</text>
+<rect x="824.4" y="16" width="123" height="40" rx="6" fill="#0d1118" stroke="#f5c518" stroke-opacity=".7"/><text class="m" x="886" y="41" text-anchor="middle">Bootstrap</text>
+<rect x="963.2" y="16" width="86" height="40" rx="6" fill="#0d1118" stroke="#4dd0ff" stroke-opacity=".7"/><text class="m" x="1006" y="41" text-anchor="middle">MySQL</text>
+<rect x="1065.2" y="16" width="68" height="40" rx="6" fill="#0d1118" stroke="#e62429" stroke-opacity=".7"/><text class="m" x="1099" y="41" text-anchor="middle">Git</text>
+<rect x="1148.8" y="16" width="95" height="40" rx="6" fill="#0d1118" stroke="#f5c518" stroke-opacity=".7"/><text class="m" x="1196" y="41" text-anchor="middle">GitHub</text>
+<rect x="1260" y="16" width="169" height="40" rx="6" fill="#0d1118" stroke="#4dd0ff" stroke-opacity=".7"/><text class="m" x="1344" y="41" text-anchor="middle">Android Studio</text>
+<rect x="1444.8" y="16" width="86" height="40" rx="6" fill="#0d1118" stroke="#e62429" stroke-opacity=".7"/><text class="m" x="1488" y="41" text-anchor="middle">Figma</text>
+</g>
+</defs>
+<g clip-path="url(#c)">
+<rect width="1280" height="72" fill="#07090d"/>
+<g class="row"><use href="#items"/><use href="#items" x="1547"/><use href="#items" x="3094"/></g>
+<rect width="90" height="72" fill="url(#fl)"/><rect x="1190" width="90" height="72" fill="url(#fr)"/>
+</g>
+<rect x=".5" y=".5" width="1279" height="71" rx="14" fill="none" stroke="#f5c518" stroke-opacity=".25"/>
+</svg>
