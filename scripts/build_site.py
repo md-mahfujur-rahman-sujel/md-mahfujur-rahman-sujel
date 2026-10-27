@@ -180,7 +180,7 @@ HTML = """<!doctype html>
   <section id="repositories" aria-labelledby="repos-h">
     <p class="kicker">05 — repositories</p>
     <h2 id="repos-h">Repository index</h2>
-    <div class="panel-scroll"><img class="panel" src="assets/repos.svg" alt="Repository index with live metadata for Apex Arcade, Unrot and Oppzy" width="1280" height="420"></div>
+    <div class="panel-scroll"><img class="panel" src="assets/repos.svg" alt="Repository index with live metadata for Apex Arcade, Unrot and Oppzy" width="1280" height="432"></div>
     <p class="links">
       <a href="__APEX__" target="_blank" rel="noopener noreferrer">Apex-Arcade</a>
       <a href="__UNROT__" target="_blank" rel="noopener noreferrer">Unrot</a>
@@ -193,7 +193,7 @@ HTML = """<!doctype html>
   <section id="activity" aria-labelledby="activity-h">
     <p class="kicker">06 — activity</p>
     <h2 id="activity-h">Recent activity</h2>
-    <div class="panel-scroll"><img class="panel" src="assets/activity.svg" alt="Recent public GitHub activity feed" width="1280" height="380"></div>
+    <div class="panel-scroll"><img class="panel" src="assets/activity.svg" alt="Recent public GitHub activity feed" width="1280" height="384"></div>
     <p class="links">
       <a href="__REPO__" target="_blank" rel="noopener noreferrer">full contribution graph on GitHub</a>
     </p>
