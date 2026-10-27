@@ -11,7 +11,7 @@
 <radialGradient id="bloomBlue"><stop offset="0" stop-color="#3B82F6" stop-opacity=".30"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>
 <radialGradient id="bloomMid"><stop offset="0" stop-color="#4F8DFF" stop-opacity=".20"/><stop offset="1" stop-color="#4F8DFF" stop-opacity="0"/></radialGradient>
 <radialGradient id="bloomCyan"><stop offset="0" stop-color="#67C7EB" stop-opacity=".17"/><stop offset="1" stop-color="#67C7EB" stop-opacity="0"/></radialGradient>
-<radialGradient id="coilGrad" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="33"><stop offset="0" stop-color="#3B82F6"/><stop offset=".5" stop-color="#93C5FD"/><stop offset=".76" stop-color="#EEF6FF"/><stop offset="1" stop-color="#FFFFFF"/></radialGradient>
+<radialGradient id="coilGrad" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="33"><stop offset="0" stop-color="#4F8DFF"/><stop offset=".48" stop-color="#93C5FD"/><stop offset=".74" stop-color="#BFDBFE"/><stop offset="1" stop-color="#EEF6FF"/></radialGradient>
 <radialGradient id="coreGrad"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#EEF6FF"/><stop offset=".68" stop-color="#BFDBFE"/><stop offset=".84" stop-color="#4F8DFF"/><stop offset=".95" stop-color="#16263A"/><stop offset="1" stop-color="#080D13"/></radialGradient>
 <radialGradient id="coreGlow"><stop offset="0" stop-color="#EEF6FF" stop-opacity=".75"/><stop offset=".55" stop-color="#67C7EB" stop-opacity=".28"/><stop offset="1" stop-color="#67C7EB" stop-opacity="0"/></radialGradient>
 <radialGradient id="reactorBloom"><stop offset="0" stop-color="#67C7EB" stop-opacity=".5"/><stop offset=".5" stop-color="#3B82F6" stop-opacity=".22"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>
