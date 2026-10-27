@@ -6,7 +6,7 @@
 
 <a href="https://linkedin.com/in/md-mahfujur-rahman-sujel" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-Connect-3B82F6?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1622" alt="LinkedIn" /></a>
 <a href="https://github.com/md-mahfujur-rahman-sujel" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/GitHub-Profile-4F8DFF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1622" alt="GitHub" /></a>
-<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Apex_Arcade-Repo-3B82F6?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1622" alt="Apex Arcade repository" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Apex-Repo-3B82F6?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1622" alt="Apex Arcade repository" /></a>
 <a href="https://github.com/md-mahfujur-rahman-sujel/Unrot" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Unrot-Repo-4F8DFF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1622" alt="Unrot repository" /></a>
 
 <img src="./assets/divider-v4.svg" width="100%" alt="" />
