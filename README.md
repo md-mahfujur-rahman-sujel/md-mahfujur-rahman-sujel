@@ -4,10 +4,10 @@
 
 <br />
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-3B82F6?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/md-mahfujur-rahman-sujel)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-16263A?style=for-the-badge&logo=github&logoColor=white)](https://github.com/md-mahfujur-rahman-sujel)
-[![Apex Arcade](https://img.shields.io/badge/Apex_Arcade-Repo-4F8DFF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade)
-[![Unrot](https://img.shields.io/badge/Unrot-Repo-67C7EB?style=for-the-badge&logo=github&logoColor=black)](https://github.com/md-mahfujur-rahman-sujel/Unrot)
+<a href="https://linkedin.com/in/md-mahfujur-rahman-sujel" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-Connect-3B82F6?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1622" alt="LinkedIn" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/GitHub-Profile-4F8DFF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1622" alt="GitHub" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Apex_Arcade-Repo-3B82F6?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1622" alt="Apex Arcade repository" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Unrot-Repo-4F8DFF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1622" alt="Unrot repository" /></a>
 
 <img src="./assets/divider-v4.svg" width="100%" alt="" />
 
@@ -22,9 +22,9 @@ BSc in Computer Science & Engineering at East West University, Bangladesh. I tur
 ## Projects
 
 <p align="center">
-<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><img src="./assets/project-apex-v4.svg" width="32%" alt="Apex Arcade — React launcher for 50 browser games" /></a>
-<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><img src="./assets/project-unrot-v4.svg" width="32%" alt="Unrot — Android app blocker with a focus timer" /></a>
-<a href="https://github.com/masum-mir/Oppzy"><img src="./assets/project-oppzy-v4.svg" width="32%" alt="Oppzy — internship and research matching platform" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade" target="_blank" rel="noopener noreferrer"><img src="./assets/project-apex-v4.svg" width="32%" alt="Apex Arcade — React launcher for 50 browser games" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot" target="_blank" rel="noopener noreferrer"><img src="./assets/project-unrot-v4.svg" width="32%" alt="Unrot — Android app blocker with a focus timer" /></a>
+<a href="https://github.com/masum-mir/Oppzy" target="_blank" rel="noopener noreferrer"><img src="./assets/project-oppzy-v4.svg" width="32%" alt="Oppzy — internship and research matching platform" /></a>
 </p>
 
 <img src="./assets/divider-v4.svg" width="100%" alt="" />
@@ -47,9 +47,9 @@ BSc in Computer Science & Engineering at East West University, Bangladesh. I tur
 
 <p align="center">
 <sub>
-<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><b>Apex-Arcade</b></a> ·
-<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><b>Unrot</b></a> ·
-<a href="https://github.com/masum-mir/Oppzy"><b>Oppzy</b></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade" target="_blank" rel="noopener noreferrer"><b>Apex-Arcade</b></a> ·
+<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot" target="_blank" rel="noopener noreferrer"><b>Unrot</b></a> ·
+<a href="https://github.com/masum-mir/Oppzy" target="_blank" rel="noopener noreferrer"><b>Oppzy</b></a>
 </sub>
 </p>
 
@@ -60,9 +60,9 @@ BSc in Computer Science & Engineering at East West University, Bangladesh. I tur
 <img src="./assets/activity.svg" width="100%" alt="Recent public GitHub activity feed" />
 
 <p align="center">
-<sub><a href="https://github.com/md-mahfujur-rahman-sujel">full contribution graph on GitHub ↗</a></sub>
+<sub><a href="https://github.com/md-mahfujur-rahman-sujel" target="_blank" rel="noopener noreferrer">full contribution graph on GitHub ↗</a></sub>
 </p>
 
 <img src="./assets/divider-v4.svg" width="100%" alt="" />
 
-<div align="center"><sub>East West University · Bangladesh · <a href="https://github.com/md-mahfujur-rahman-sujel">github.com/md-mahfujur-rahman-sujel</a></sub></div>
+<div align="center"><sub>East West University · Bangladesh · <a href="https://github.com/md-mahfujur-rahman-sujel" target="_blank" rel="noopener noreferrer">github.com/md-mahfujur-rahman-sujel</a></sub></div>

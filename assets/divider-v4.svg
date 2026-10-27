@@ -15,7 +15,6 @@
 @media (prefers-reduced-motion:reduce){.p,.pulseA,.pulseB{animation:none!important}}
 </style>
 </defs>
-<rect width="1280" height="36" fill="#05080D"/>
 <rect y="17" width="1280" height="2" fill="url(#rail)"/>
 <rect x="640" y="13" width="10" height="10" rx="2" transform="rotate(45 645 18)" fill="#070C12" stroke="#4F8DFF" stroke-width="1.2"/>
 <circle cx="645" cy="18" r="2" fill="#A9C7FF" filter="url(#glow)"/>
