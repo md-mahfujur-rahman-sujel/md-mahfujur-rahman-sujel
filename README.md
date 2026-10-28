@@ -8,7 +8,7 @@
 
 <a href="https://linkedin.com/in/md-mahfujur-rahman-sujel" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-Connect-3B82F6?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=16263A" alt="LinkedIn" /></a>
 <a href="https://github.com/md-mahfujur-rahman-sujel" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/GitHub-Profile-4F8DFF?style=for-the-badge&logo=github&logoColor=white&labelColor=16263A" alt="GitHub" /></a>
-<a href="https://md-mahfujur-rahman-sujel.github.io/md-mahfujur-rahman-sujel/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Interactive-Site-6A0C0B?style=for-the-badge&logo=githubpages&logoColor=FBCA03&labelColor=16263A" alt="Interactive site with the flying Skybot" /></a>
+<a href="https://md-mahfujur-rahman-sujel.github.io/md-mahfujur-rahman-sujel/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Interactive-Site-3B82F6?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=16263A" alt="Interactive site with the flying Skybot" /></a>
 
 <a href="#readme"><img src="./assets/divider-v4.svg" width="100%" alt="" /></a>
 
