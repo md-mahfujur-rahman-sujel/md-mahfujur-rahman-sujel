@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 150" role="img" aria-label="Skybot, the profile mascot, flying across a night-sky strip">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05080D"/><stop offset=".55" stop-color="#090F16"/><stop offset="1" stop-color="#05080D"/></linearGradient>
+<linearGradient id="goldline" x1="0" x2="1"><stop offset="0" stop-color="#FBCA03" stop-opacity="0"/><stop offset=".5" stop-color="#FBCA03" stop-opacity=".9"/><stop offset="1" stop-color="#B97D10" stop-opacity="0"/></linearGradient>
+<radialGradient id="maroon"><stop offset="0" stop-color="#6A0C0B" stop-opacity=".5"/><stop offset="1" stop-color="#6A0C0B" stop-opacity="0"/></radialGradient>
+<radialGradient id="blue"><stop offset="0" stop-color="#3B82F6" stop-opacity=".22"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#16263A" stroke-opacity=".2"/></pattern>
+<clipPath id="win"><rect width="1280" height="150" rx="16"/></clipPath>
+<style>
+.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+.fly{animation:fly 24s ease-in-out infinite}
+@keyframes fly{0%{transform:translate(110px,86px)}14%{transform:translate(380px,58px)}28%{transform:translate(650px,90px)}42%{transform:translate(930px,60px)}56%{transform:translate(1170px,84px)}70%{transform:translate(900px,64px)}84%{transform:translate(520px,90px)}100%{transform:translate(110px,86px)}}
+.flip{animation:flip 24s ease-in-out infinite}
+@keyframes flip{0%,55%{transform:scaleX(1)}60%,97%{transform:scaleX(-1)}100%{transform:scaleX(1)}}
+.bob{animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-4px)}}
+.sk-flame{transform-origin:0 26px;animation:flick .16s ease-in-out infinite alternate}
+@keyframes flick{from{transform:scaleY(.82)}to{transform:scaleY(1.14)}}
+.tw{animation:tw 3.4s ease-in-out infinite}
+.tw2{animation-delay:1.1s}.tw3{animation-delay:2.2s}
+@keyframes tw{50%{opacity:.15}}
+@media (prefers-reduced-motion:reduce){.fly,.flip,.bob,.sk-flame,.tw{animation:none!important}}
+</style>
+</defs>
+<g clip-path="url(#win)">
+<rect width="1280" height="150" fill="url(#bg)"/>
+<rect width="1280" height="150" fill="url(#grid)"/>
+<ellipse cx="260" cy="40" rx="360" ry="110" fill="url(#blue)"/>
+<ellipse cx="1130" cy="150" rx="330" ry="90" fill="url(#maroon)"/>
+<rect width="1280" height="1.5" fill="url(#goldline)"/>
+<g fill="#A9C7FF" opacity=".55">
+<circle class="tw" cx="210" cy="30" r="1.6"/><circle class="tw tw2" cx="470" cy="22" r="1.3"/><circle class="tw tw3" cx="740" cy="40" r="1.6"/>
+<circle class="tw tw2" cx="1010" cy="24" r="1.4"/><circle class="tw" cx="1210" cy="46" r="1.5"/><circle class="tw tw3" cx="320" cy="124" r="1.3"/>
+<circle class="tw" cx="830" cy="128" r="1.5"/><circle class="tw tw2" cx="1090" cy="118" r="1.3"/><circle class="tw tw3" cx="600" cy="132" r="1.4"/>
+</g>
+<text class="m" x="24" y="27" font-size="10" letter-spacing="2" fill="#B97D10">SKYBOT · ON PATROL</text>
+<text class="m" x="1256" y="27" text-anchor="end" font-size="10" letter-spacing="2" fill="#7E93A8">AUTOPILOT</text>
+
+<g class="fly" transform="translate(110 86)"><g class="flip"><g class="bob"><g transform="scale(.8)">
+<g class="sk-flame"><path d="M-8 26Q0 58 8 26Z" fill="#AA0505"/><path d="M-5 26Q0 46 5 26Z" fill="#FBCA03"/><path d="M-2.2 26Q0 36 2.2 26Z" fill="#FFFFFF"/></g>
+<path d="M-18 6L-36 20L-18 22Z" fill="#3B82F6" stroke="#16263A" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M18 6L36 20L18 22Z" fill="#3B82F6" stroke="#16263A" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M-17 -2Q-19 22-9 26H9Q19 22 17-2Z" fill="#4F8DFF" stroke="#16263A" stroke-width="2.6" stroke-linejoin="round"/>
+<rect x="-10" y="8" width="20" height="9" rx="3.5" fill="#EEF6FF" stroke="#16263A" stroke-width="1.8"/>
+<rect x="-6.5" y="11.5" width="13" height="2.4" rx="1.2" fill="#FBCA03"/>
+<rect x="-10" y="24" width="20" height="6" rx="3" fill="#6A0C0B" stroke="#16263A" stroke-width="1.8"/>
+<ellipse cx="-21" cy="10" rx="4.6" ry="6.4" fill="#EEF6FF" stroke="#16263A" stroke-width="2.2"/>
+<ellipse cx="21" cy="10" rx="4.6" ry="6.4" fill="#EEF6FF" stroke="#16263A" stroke-width="2.2"/>
+<path d="M0 -37V-47" stroke="#16263A" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="0" cy="-49" r="3.8" fill="#FBCA03" stroke="#16263A" stroke-width="1.8"/>
+<circle cx="0" cy="-16" r="22" fill="#EEF6FF" stroke="#16263A" stroke-width="2.8"/>
+<path d="M13 -4Q22 -12 20 -24" fill="none" stroke="#A9C7FF" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+<rect x="-16" y="-25" width="32" height="17" rx="8.5" fill="#05080D" stroke="#16263A" stroke-width="1.8"/>
+<ellipse cx="-6.5" cy="-16.5" rx="3.4" ry="4.2" fill="#67C7EB"/>
+<ellipse cx="6.5" cy="-16.5" rx="3.4" ry="4.2" fill="#67C7EB"/>
+</g></g></g></g>
+</g>
+<rect x=".5" y=".5" width="1279" height="149" rx="16" fill="none" stroke="#16263A" stroke-opacity=".6"/>
+</svg>

@@ -37,21 +37,21 @@
 <text class="m" x="382" y="27" text-anchor="end" font-size="9" fill="#EEF6FF" fill-opacity=".66">node 03 · web</text>
 <rect class="shinex" style="--sd:5.8s" x="-120" y="0" width="120" height="42" fill="url(#shine)" opacity=".45"/>
 
-<circle cx="5" cy="160" r="4.5" fill="#3B82F6" filter="url(#glow)"/>
-<circle cx="395" cy="160" r="4.5" fill="#3B82F6" filter="url(#glow)"/>
-<path d="M9 160h9M391 160h-9" stroke="#3B82F6" stroke-width="1.5" opacity=".8"/>
+<circle cx="5" cy="160" r="4.5" fill="#AA0505" filter="url(#glow)"/>
+<circle cx="395" cy="160" r="4.5" fill="#AA0505" filter="url(#glow)"/>
+<path d="M9 160h9M391 160h-9" stroke="#AA0505" stroke-width="1.5" opacity=".9"/>
 
 <rect x="22" y="58" width="356" height="104" rx="10" fill="#070C12" stroke="#16263A" stroke-opacity=".7"/>
 <g clip-path="url(#prev)">
-<text class="m" x="36" y="78" font-size="9" letter-spacing="1.6" fill="#7E93A8">MATCHES · LIVE</text>
-<text class="m" x="364" y="78" text-anchor="end" font-size="9" fill="#A9C7FF">BEST 94%</text>
+<text class="m" x="36" y="78" font-size="9" letter-spacing="1.6" fill="#7E93A8">MATCHES · SAMPLE</text>
+<text class="m" x="364" y="78" text-anchor="end" font-size="9" fill="#A9C7FF">SAMPLE DATA</text>
 
 <g class="slide">
 <rect x="36" y="84" width="324" height="34" rx="7" fill="#080D13" stroke="#16263A" stroke-opacity=".7"/>
 <rect x="44" y="90" width="22" height="22" rx="6" fill="#3B82F6" fill-opacity=".25" stroke="#3B82F6"/>
-<text class="s" x="55" y="105" text-anchor="middle" font-size="10" font-weight="800" fill="#EEF6FF">N</text>
+<text class="s" x="55" y="105" text-anchor="middle" font-size="10" font-weight="800" fill="#EEF6FF">C</text>
 <text class="s" x="76" y="98" font-size="11" font-weight="700" fill="#EEF6FF">Software Engineering Intern</text>
-<text class="s" x="76" y="109" font-size="9" fill="#7E93A8">Nexus Labs</text>
+<text class="s" x="76" y="109" font-size="9" fill="#7E93A8">Sample company</text>
 <text class="s" x="350" y="100" text-anchor="end" font-size="14" font-weight="800" fill="#A9C7FF">94%</text>
 <rect x="300" y="106" width="50" height="3" rx="1.5" fill="#182434"/>
 <rect x="300" y="106" width="47" height="3" rx="1.5" fill="#A9C7FF"/>
@@ -60,9 +60,9 @@
 <g class="slide" style="animation-delay:1.2s">
 <rect x="36" y="124" width="324" height="34" rx="7" fill="#080D13" stroke="#16263A" stroke-opacity=".7"/>
 <rect x="44" y="130" width="22" height="22" rx="6" fill="#67C7EB" fill-opacity=".18" stroke="#67C7EB"/>
-<text class="s" x="55" y="145" text-anchor="middle" font-size="10" font-weight="800" fill="#EEF6FF">R</text>
+<text class="s" x="55" y="145" text-anchor="middle" font-size="10" font-weight="800" fill="#EEF6FF">L</text>
 <text class="s" x="76" y="138" font-size="11" font-weight="700" fill="#EEF6FF">Research Assistant</text>
-<text class="s" x="76" y="149" font-size="9" fill="#7E93A8">EWU Lab</text>
+<text class="s" x="76" y="149" font-size="9" fill="#7E93A8">Sample lab</text>
 <text class="s" x="350" y="140" text-anchor="end" font-size="14" font-weight="800" fill="#67C7EB">88%</text>
 <rect x="300" y="146" width="50" height="3" rx="1.5" fill="#182434"/>
 <rect x="300" y="146" width="44" height="3" rx="1.5" fill="#67C7EB"/>

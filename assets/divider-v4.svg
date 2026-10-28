@@ -16,8 +16,8 @@
 </style>
 </defs>
 <rect y="17" width="1280" height="2" fill="url(#rail)"/>
-<rect x="640" y="13" width="10" height="10" rx="2" transform="rotate(45 645 18)" fill="#070C12" stroke="#4F8DFF" stroke-width="1.2"/>
-<circle cx="645" cy="18" r="2" fill="#A9C7FF" filter="url(#glow)"/>
+<rect x="640" y="13" width="10" height="10" rx="2" transform="rotate(45 645 18)" fill="#070C12" stroke="#FBCA03" stroke-width="1.2"/>
+<circle cx="645" cy="18" r="2" fill="#FBCA03" filter="url(#glow)"/>
 
 <g fill="#16263A">
 <rect x="120" y="14" width="1" height="8"/><rect x="320" y="14" width="1" height="8"/><rect x="520" y="14" width="1" height="8"/>

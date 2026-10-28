@@ -198,7 +198,7 @@ def render() -> str:
     out.append(f'<rect y="{footer_y}" width="1280" height="46" fill="#070C12" fill-opacity=".94"/><rect y="{footer_y}" width="1280" height="1" fill="#16263A"/>')
     out.append(f'<text class="m" x="20" y="{footer_y + 28}" font-size="11" fill="#7E93A8">{len(repos)} repositories · {owned} owned · {collab} collaborator · {"cached snapshot" if cached else "live github api"}</text>')
     status = "CACHED SNAPSHOT" if cached else "SYNC OK"
-    status_color = "#4F8DFF" if cached else "#67C7EB"
+    status_color = "#B97D10" if cached else "#67C7EB"
     out.append(f'<circle class="pulse" cx="620" cy="{footer_y + 24}" r="3" fill="{status_color}"/>')
     out.append(f'<text class="m" x="630" y="{footer_y + 28}" font-size="10.5" fill="{status_color}">{status}</text>')
     out.append(f'<text class="m" x="1260" y="{footer_y + 28}" text-anchor="end" font-size="11" fill="#7E93A8">github.com/{esc(USER)}?tab=repositories</text>')

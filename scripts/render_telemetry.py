@@ -150,10 +150,15 @@ def render() -> str:
     weeks = build_weeks(days, 53)
 
     cached = cached or not user or not repos
-    public_repos = int(user.get("public_repos") or len(repos) or 3)
+    def count(key: str, fallback: int) -> int:
+        # A real 0 must stay 0; only a missing value (API unreachable) uses the fallback.
+        value = user.get(key)
+        return value if isinstance(value, int) else fallback
+
+    public_repos = count("public_repos", len(repos) or 3)
     stars = sum(int(repo.get("stargazers_count") or 0) for repo in repos)
-    followers = int(user.get("followers") or 1)
-    following = int(user.get("following") or 2)
+    followers = count("followers", 1)
+    following = count("following", 2)
     created = user.get("created_at", "2026-07-29T00:00:00Z")
     try:
         member_since = dt.date.fromisoformat(created[:10]).strftime("%b %Y").upper()
@@ -347,7 +352,7 @@ def render() -> str:
         elif ratio <= 0.75:
             color = "#A9C7FF"
         else:
-            color = "#67C7EB"
+            color = "#FBCA03"
         if week["total"] == peak_week and week["total"] > 0:
             peak_index = index
         out.append(
@@ -365,8 +370,8 @@ def render() -> str:
     if peak_index >= 0:
         px = CHART_X + peak_index * (bar_w + bar_gap) + bar_w / 2
         py = CHART_BASE - (3 + (peak_week / week_max) * CHART_H)
-        out.append(f'<circle class="pulse" cx="{px:.1f}" cy="{py - 7:.1f}" r="3.2" fill="#67C7EB" filter="url(#glow)"/>')
-        out.append(f'<text class="m" x="{px:.1f}" y="{py - 14:.1f}" text-anchor="middle" font-size="9.5" fill="#67C7EB">{stats["peak"]}</text>')
+        out.append(f'<circle class="pulse" cx="{px:.1f}" cy="{py - 7:.1f}" r="3.2" fill="#FBCA03" filter="url(#glow)"/>')
+        out.append(f'<text class="m" x="{px:.1f}" y="{py - 14:.1f}" text-anchor="middle" font-size="9.5" fill="#FBCA03">{stats["peak"]}</text>')
 
     out.append('<rect class="scanA" x="-140" y="484" width="140" height="92" fill="url(#scanline)"/>')
 
@@ -374,7 +379,7 @@ def render() -> str:
     out.append('<rect y="620" width="1280" height="60" fill="#070C12" fill-opacity=".94"/><rect y="620" width="1280" height="1" fill="#16263A"/>')
     out.append(f'<text class="m" x="20" y="654" font-size="11.5" fill="#7E93A8">{stats["total"]} contributions · {stats["active_days"]} active days · {window_days}d window</text>')
     status = "CACHED SNAPSHOT" if cached else "SYNC OK"
-    status_color = "#4F8DFF" if cached else "#67C7EB"
+    status_color = "#B97D10" if cached else "#67C7EB"
     out.append(f'<circle class="pulse" cx="600" cy="650" r="3" fill="{status_color}"/>')
     out.append(f'<text class="m" x="610" y="654" font-size="11" fill="{status_color}">{status}</text>')
     stamp_x = 610 + len(status) * 6.6 + 18

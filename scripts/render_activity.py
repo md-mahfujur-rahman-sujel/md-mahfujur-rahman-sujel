@@ -211,7 +211,7 @@ def render() -> str:
     out.append(f'<rect y="{FOOTER}" width="1280" height="42" fill="#070C12" fill-opacity=".94"/><rect y="{FOOTER}" width="1280" height="1" fill="#16263A"/>')
     out.append(f'<text class="m" x="20" y="{FOOTER + 26}" font-size="10.5" fill="#7E93A8">{len(rows)} events · public feed · last 30</text>')
     status = "CACHED SNAPSHOT" if cached else "STREAM OK"
-    status_color = "#4F8DFF" if cached else "#67C7EB"
+    status_color = "#B97D10" if cached else "#67C7EB"
     out.append(f'<circle class="pulse" cx="356" cy="{FOOTER + 22}" r="3" fill="{status_color}"/>')
     out.append(f'<text class="m" x="366" y="{FOOTER + 26}" font-size="10.5" fill="{status_color}">{status}</text>')
     out.append(f'<text class="m" x="1260" y="{FOOTER + 26}" text-anchor="end" font-size="10.5" fill="#7E93A8">github.com/{esc(USER)}</text>')

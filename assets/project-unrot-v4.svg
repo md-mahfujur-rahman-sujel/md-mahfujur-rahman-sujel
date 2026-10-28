@@ -38,17 +38,17 @@
 <text class="m" x="382" y="27" text-anchor="end" font-size="9" fill="#EEF6FF" fill-opacity=".8">node 02 · android</text>
 <rect class="shinex" style="--sd:5.2s" x="-120" y="0" width="120" height="42" fill="url(#shine)" opacity=".5"/>
 
-<circle cx="5" cy="160" r="4.5" fill="#67C7EB" filter="url(#glow)"/>
-<circle cx="395" cy="160" r="4.5" fill="#67C7EB" filter="url(#glow)"/>
-<path d="M9 160h9M391 160h-9" stroke="#67C7EB" stroke-width="1.5" opacity=".6"/>
+<circle cx="5" cy="160" r="4.5" fill="#B97D10" filter="url(#glow)"/>
+<circle cx="395" cy="160" r="4.5" fill="#B97D10" filter="url(#glow)"/>
+<path d="M9 160h9M391 160h-9" stroke="#B97D10" stroke-width="1.5" opacity=".85"/>
 
 <rect x="22" y="58" width="356" height="104" rx="10" fill="#080E15" stroke="#16263A" stroke-opacity=".7"/>
 <g clip-path="url(#prev)">
-<text class="m" x="40" y="82" font-size="9" letter-spacing="1.4" fill="#7E93A8">LOCKED</text>
+<text class="m" x="40" y="82" font-size="9" letter-spacing="1.4" fill="#7E93A8">SAMPLE · LOCKED</text>
 <text class="s" x="40" y="104" font-size="16" font-weight="700" fill="#EEF6FF">12 apps</text>
 <rect x="40" y="116" width="64" height="3" rx="1.5" fill="#182434"/>
 <rect x="40" y="116" width="46" height="3" rx="1.5" fill="#3B82F6"/>
-<text class="m" x="360" y="82" text-anchor="end" font-size="9" letter-spacing="1.4" fill="#7E93A8">EARNED</text>
+<text class="m" x="360" y="82" text-anchor="end" font-size="9" letter-spacing="1.4" fill="#7E93A8">SAMPLE · EARNED</text>
 <text class="s" x="360" y="104" text-anchor="end" font-size="16" font-weight="700" fill="#EEF6FF">25 min</text>
 <rect x="296" y="116" width="64" height="3" rx="1.5" fill="#182434"/>
 <rect x="314" y="116" width="46" height="3" rx="1.5" fill="#67C7EB"/>
