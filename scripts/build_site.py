@@ -96,11 +96,13 @@ footer a:hover{color:var(--gold)}
 /* Skybot: original mascot. Roams by default; click to follow the cursor. */
 #flyer{position:fixed;left:0;top:0;z-index:20;pointer-events:none;will-change:transform}
 #flyer[hidden]{display:none}
-#flyer-btn{pointer-events:auto;display:block;width:64px;height:94px;padding:0;margin:0;border:0;background:none;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;will-change:transform}
-#flyer-btn svg{display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 10px 14px rgba(0,0,0,.55))}
+#flyer-btn{pointer-events:auto;display:block;width:58px;height:107px;padding:0;margin:0;border:0;background:none;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;will-change:transform}
+.flyer-stage{display:block;position:relative;width:100%;height:100%;perspective:560px}
+/* yaw is clamped to 24deg and the squash to 8%, so the silhouette never collapses */
+.flyer-fig{display:block;width:100%;height:100%;overflow:visible;transform-origin:50% 74%;backface-visibility:hidden;filter:drop-shadow(0 12px 14px rgba(0,0,0,.5));will-change:transform}
+.flyer-shadow{position:absolute;left:50%;bottom:-2px;width:36px;height:9px;margin-left:-18px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.6),transparent 78%);will-change:transform,opacity}
 #flyer-btn:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:14px}
-.sk-thrust{transform-origin:0 26px;transform:scaleY(var(--thrust,1))}
-.sk-flame{transform-origin:0 26px;animation:skflick .16s ease-in-out infinite alternate}
+.sk-flame{animation:skflick .16s ease-in-out infinite alternate}
 @keyframes skflick{from{transform:scaleY(.82)}to{transform:scaleY(1.14)}}
 .sk-spark{position:fixed;left:0;top:0;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;pointer-events:none;z-index:19}
 .nav .nav-btn{font:600 11.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--bronze);background:transparent;border:1px solid rgba(185,125,16,.5);padding:9px 12px;border-radius:999px;cursor:pointer;transition:color .25s,border-color .25s}
@@ -218,37 +220,23 @@ HTML = """<!doctype html>
     Panels refresh every 3 hours via GitHub Actions.
   </footer>
 </main>
-<div id="flyer"><button id="flyer-btn" type="button" aria-pressed="false" aria-label="Skybot is roaming. Activate to make it follow your cursor."><svg viewBox="-40 -56 80 118" width="64" height="94" aria-hidden="true" focusable="false">
-<g class="sk-thrust"><g class="sk-flame"><path d="M-8 26Q0 58 8 26Z" fill="#AA0505"/><path d="M-5 26Q0 46 5 26Z" fill="#FBCA03"/><path d="M-2.2 26Q0 36 2.2 26Z" fill="#FFFFFF"/></g></g>
-<path d="M-18 6L-36 20L-18 22Z" fill="#3B82F6" stroke="#16263A" stroke-width="2.4" stroke-linejoin="round"/>
-<path d="M18 6L36 20L18 22Z" fill="#3B82F6" stroke="#16263A" stroke-width="2.4" stroke-linejoin="round"/>
-<path d="M-17 -2Q-19 22-9 26H9Q19 22 17-2Z" fill="#4F8DFF" stroke="#16263A" stroke-width="2.6" stroke-linejoin="round"/>
-<rect x="-10" y="8" width="20" height="9" rx="3.5" fill="#EEF6FF" stroke="#16263A" stroke-width="1.8"/>
-<rect x="-6.5" y="11.5" width="13" height="2.4" rx="1.2" fill="#FBCA03"/>
-<rect x="-10" y="24" width="20" height="6" rx="3" fill="#6A0C0B" stroke="#16263A" stroke-width="1.8"/>
-<ellipse cx="-21" cy="10" rx="4.6" ry="6.4" fill="#EEF6FF" stroke="#16263A" stroke-width="2.2"/>
-<ellipse cx="21" cy="10" rx="4.6" ry="6.4" fill="#EEF6FF" stroke="#16263A" stroke-width="2.2"/>
-<path d="M0 -37V-47" stroke="#16263A" stroke-width="2.8" stroke-linecap="round"/>
-<circle cx="0" cy="-49" r="3.8" fill="#FBCA03" stroke="#16263A" stroke-width="1.8"/>
-<circle cx="0" cy="-16" r="22" fill="#EEF6FF" stroke="#16263A" stroke-width="2.8"/>
-<path d="M13 -4Q22 -12 20 -24" fill="none" stroke="#A9C7FF" stroke-width="3" stroke-linecap="round" opacity=".7"/>
-<rect x="-16" y="-25" width="32" height="17" rx="8.5" fill="#05080D" stroke="#16263A" stroke-width="1.8"/>
-<ellipse cx="-6.5" cy="-16.5" rx="3.4" ry="4.2" fill="#67C7EB"/>
-<ellipse cx="6.5" cy="-16.5" rx="3.4" ry="4.2" fill="#67C7EB"/>
-</svg></button></div>
+<div id="flyer"><button id="flyer-btn" type="button" aria-pressed="false" aria-label="Skybot is roaming. Activate to make it follow your cursor.">
+<span class="flyer-stage"><span class="flyer-shadow" aria-hidden="true"></span><svg class="flyer-fig" viewBox="-32 -61 64 118" width="58" height="107" aria-hidden="true" focusable="false">__MASCOT__</svg></span>
+</button></div>
 <script>
 (function(){
 var root=document.getElementById('flyer'),btn=document.getElementById('flyer-btn'),tog=document.getElementById('flyer-toggle');
 if(!root||!btn){return;}
 var svg=btn.querySelector('svg');
+var shade=btn.querySelector('.flyer-shadow');
 var reduce=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
 var W=window.innerWidth,H=window.innerHeight;
 var pos={x:W*0.78,y:H*0.62},vel={x:0,y:0},target={x:pos.x,y:pos.y},mouse={x:W/2,y:H/2};
-var mode='roam',face=1,last=0,raf=0,pauseUntil=0,sparkAt=0,live=0,enabled=true,MAX=24;
+var mode='roam',yaw=0,last=0,raf=0,pauseUntil=0,sparkAt=0,live=0,enabled=true,MAX=24;
 function rnd(a,b){return a+Math.random()*(b-a);}
 function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
 function pick(){target.x=rnd(70,Math.max(120,W-70));target.y=rnd(110,Math.max(160,H-90));}
-function place(){root.style.transform='translate3d('+(pos.x-32).toFixed(1)+'px,'+(pos.y-45).toFixed(1)+'px,0)';}
+function place(){root.style.transform='translate3d('+(pos.x-29).toFixed(1)+'px,'+(pos.y-54).toFixed(1)+'px,0)';}
 function dot(x,y,dx,dy,life,color){
   if(live>=MAX||!svg.animate){return;}
   var s=document.createElement('span');
@@ -276,14 +264,17 @@ function tick(t){
   vel.y+=((target.y-pos.y)*k-vel.y*c)*dt;
   pos.x+=vel.x*dt;pos.y+=vel.y*dt;
   var speed=Math.hypot(vel.x,vel.y);
-  if(Math.abs(vel.x)>25){face+=((vel.x>0?1:-1)-face)*Math.min(1,dt*12);}
-  var tilt=clamp(vel.x*0.035,-20,20);
-  btn.style.transform='translateY('+(Math.sin(t/430)*3).toFixed(2)+'px) rotate('+tilt.toFixed(2)+'deg) scaleX('+face.toFixed(3)+')';
-  svg.style.setProperty('--thrust',(1+Math.min(speed/450,1)).toFixed(2));
+  var yawT=Math.abs(vel.x)>28?clamp(vel.x/240,-1,1):0;
+  yaw+=(yawT-yaw)*Math.min(1,dt*7);
+  var ay=Math.abs(yaw),tilt=clamp(vel.x*0.035,-20,20);
+  btn.style.transform='translateY('+(Math.sin(t/430)*3).toFixed(2)+'px) rotate('+tilt.toFixed(2)+'deg)';
+  svg.style.transform='rotateY('+(yaw*24).toFixed(2)+'deg) scaleX('+(1-ay*0.08).toFixed(3)+')';
+  shade.style.transform='translateX('+(-yaw*6).toFixed(1)+'px) scaleX('+(1-ay*0.35).toFixed(2)+')';
+  shade.style.opacity=(0.8-ay*0.25).toFixed(2);
   if(speed>170&&t>sparkAt){sparkAt=t+75;dot(pos.x,pos.y+34,rnd(-8,8),rnd(20,44),420,Math.random()<0.5?'#FBCA03':'#AA0505');}
   place();
 }
-function settle(){pos.x=W-60;pos.y=H-80;btn.style.transform='none';place();}
+function settle(){pos.x=W-60;pos.y=H-80;btn.style.transform='none';svg.style.transform='none';shade.style.transform='none';place();}
 function sync(){
   cancelAnimationFrame(raf);raf=0;
   if(!enabled){return;}
@@ -364,6 +355,13 @@ def inline_svg(path: Path) -> str:
     return svg.replace("<svg ", '<svg class="panel panel-hero" ', 1)
 
 
+def mascot_markup() -> str:
+    svg = (ASSETS / "mascot.svg").read_text(encoding="utf-8").strip()
+    if not svg.startswith("<svg") or not svg.endswith("</svg>"):
+        raise SystemExit("mascot.svg: expected a bare <svg> root")
+    return svg[svg.index(">") + 1:-6].strip()
+
+
 def main() -> None:
     hero = inline_svg(ASSETS / "hero-v4.svg")
     html = (
@@ -375,6 +373,7 @@ def main() -> None:
         .replace("__UNROT__", UNROT)
         .replace("__OPPZY__", OPPZY)
         .replace("__USER__", USER)
+        .replace("__MASCOT__", mascot_markup())
     )
 
     (OUT / "assets").mkdir(parents=True, exist_ok=True)
