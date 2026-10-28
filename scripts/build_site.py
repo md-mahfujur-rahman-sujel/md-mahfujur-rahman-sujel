@@ -315,6 +315,34 @@ setMode('roam');
 place();
 setEnabled(saved!=='off');
 })();
+(function(){
+var hero=document.querySelector('.hero svg');
+var rc=hero?hero.querySelector('.rc'):null;
+if(!rc||!rc.parentNode){return;}
+var mq=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
+if(mq.matches){return;}
+var core=rc.parentNode,px=0,py=0,has=false,raf=0;
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+function frame(){
+  raf=0;
+  var r=core.getBoundingClientRect(),h=hero.getBoundingClientRect();
+  var k=h.width?1280/h.width:1;
+  var dx=(px-(r.left+r.width/2))*k,dy=(py-(r.top+r.height/2))*k;
+  var d=Math.hypot(dx,dy);
+  var near=has&&d<130;
+  var pull=has?clamp(1-d/420,0,1):0;
+  hero.style.setProperty('--rx',(has?clamp(dx*0.05,-7,7):0).toFixed(2)+'px');
+  hero.style.setProperty('--ry',(has?clamp(dy*0.05,-7,7):0).toFixed(2)+'px');
+  hero.style.setProperty('--rs',(near?1.14:1+pull*0.06).toFixed(3));
+  hero.classList.toggle('near',near);
+}
+function ask(){if(!raf){raf=requestAnimationFrame(frame);}}
+function move(e){px=e.clientX;py=e.clientY;has=true;ask();}
+window.addEventListener('pointermove',move,{passive:true});
+window.addEventListener('pointerdown',move,{passive:true});
+window.addEventListener('scroll',ask,{passive:true});
+document.documentElement.addEventListener('mouseleave',function(){has=false;ask();});
+})();
 </script>
 </body>
 </html>
