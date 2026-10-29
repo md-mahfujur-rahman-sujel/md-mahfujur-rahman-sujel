@@ -48,31 +48,41 @@
 </picture>
 </p>
 
+
+
 <h2>Selected work</h2>
 
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/projects?username=md-mahfujur-rahman-sujel&amp;theme=github-dark&amp;avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&amp;repos=md-mahfujur-rahman-sujel%2FOppzy%2Cmd-mahfujur-rahman-sujel%2FApex-Arcade%2Cmd-mahfujur-rahman-sujel%2FUnrot&amp;v=recruiter-projects-1&amp;mode=light" />
+  <img src="https://www.gitskins.com/api/section/projects?username=md-mahfujur-rahman-sujel&amp;theme=github-dark&amp;avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&amp;repos=md-mahfujur-rahman-sujel%2FOppzy%2Cmd-mahfujur-rahman-sujel%2FApex-Arcade%2Cmd-mahfujur-rahman-sujel%2FUnrot&amp;v=recruiter-projects-1&amp;mode=dark" width="100%" alt="Selected projects graph" />
+</picture>
+
+</p>
+
 <table width="100%">
 <tr>
-<td width="58%" valign="top">
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/projects?username=md-mahfujur-rahman-sujel&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&repos=md-mahfujur-rahman-sujel%2FOppzy%2Cmd-mahfujur-rahman-sujel%2FApex-Arcade%2Cmd-mahfujur-rahman-sujel%2FUnrot&v=recruiter-projects-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/projects?username=md-mahfujur-rahman-sujel&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&repos=md-mahfujur-rahman-sujel%2FOppzy%2Cmd-mahfujur-rahman-sujel%2FApex-Arcade%2Cmd-mahfujur-rahman-sujel%2FUnrot&v=recruiter-projects-1&mode=dark" width="100%" alt="Md Mahfujur Rahman Sujel selected projects" />
-</picture>
-</td>
-<td width="42%" valign="top">
-<h3><a href="https://github.com/masum-mir/Oppzy">Oppzy</a></h3>
+<td width="33%" valign="top">
+<h3><a href="https://github.com/masum-mir/Oppzy">Oppzy ↗</a></h3>
 <p>A selected public project.</p>
-<p><sub>JavaScript · ⭐ 0 · 🍴 0</sub></p>
-<p><a href="https://github.com/masum-mir/Oppzy">Read the repository →</a></p>
+<p><sub>JavaScript · ⭐ 0</sub></p>
+<p><a href="https://github.com/masum-mir/Oppzy">View repository →</a></p>
+</td>
+<td width="33%" valign="top">
+<h3><a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade">Apex-Arcade ↗</a></h3>
+<p>Browser Based Game Hub</p>
+<p><sub>HTML · ⭐ 0</sub></p>
+<p><a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade">View repository →</a></p>
+</td>
+<td width="33%" valign="top">
+<h3><a href="https://github.com/md-mahfujur-rahman-sujel/Unrot">Unrot ↗</a></h3>
+<p>Android App Blocker</p>
+<p><sub>Kotlin · ⭐ 0</sub></p>
+<p><a href="https://github.com/md-mahfujur-rahman-sujel/Unrot">View repository →</a></p>
 </td>
 </tr>
 </table>
 
-<table width="100%">
-<tr>
-<td width="33%" valign="top"><h3><a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade">Apex-Arcade</a></h3><p>Browser Based Game Hub</p><p><sub>HTML · ⭐ 0</sub></p></td>
-<td width="33%" valign="top"><h3><a href="https://github.com/md-mahfujur-rahman-sujel/Unrot">Unrot</a></h3><p>Android App Blocker</p><p><sub>Kotlin · ⭐ 0</sub></p></td>
-</tr>
-</table>
 
 <h2>Technical toolkit</h2>
 
@@ -111,4 +121,4 @@
 </tr>
 </table>
 
-<p align="center"><sub>Md Mahfujur Rahman Sujel · recruiter-ready profile generated with <a href="https://www.gitskins.com/readme-generator">GitSkins</a></sub></p>
+<p align="center"><sub>Md Mahfujur Rahman Sujel</sub></p>
