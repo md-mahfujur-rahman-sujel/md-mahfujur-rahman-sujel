@@ -1,124 +1,69 @@
 <div align="center">
 
-<table width="100%">
-<tr>
-<td width="64%" valign="middle">
-<p><sub>RECRUITER SIGNAL BRIEF · md-mahfujur-rahman-sujel</sub></p>
-<h1>Md Mahfujur Rahman Sujel</h1>
-<h2>Frontend or full-stack engineer</h2>
-<p>Trying Out New Things...</p>
-<p><strong>● Building and sharing work in public</strong></p>
+<a href="#readme"><img src="./assets/hero-v5.svg" width="100%" alt="Md Mahfujur Rahman Sujel — frontend and full-stack engineer, workspace interface with a Spider-Man mask emblem" /></a>
 
-<p><a href="https://github.com/md-mahfujur-rahman-sujel">GitHub</a></p>
-</td>
-<td width="36%" valign="middle" align="center">
-<img src="https://avatars.githubusercontent.com/u/310651921?u=efca15966cef8e997e9a94a1fe9769055a631bd9&amp;v=4" width="180" alt="Md Mahfujur Rahman Sujel GitHub avatar" />
-</td>
-</tr>
-</table>
+<br />
+
+<a href="https://linkedin.com/in/md-mahfujur-rahman-sujel"><img src="https://img.shields.io/badge/LinkedIn-Connect-D9232E?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1E2C48" alt="LinkedIn" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel"><img src="https://img.shields.io/badge/GitHub-Profile-FF6B6B?style=for-the-badge&logo=github&logoColor=white&labelColor=1E2C48" alt="GitHub" /></a>
+<a href="https://md-mahfujur-rahman-sujel.github.io"><img src="https://img.shields.io/badge/Interactive-Site-6C9FE0?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=1E2C48" alt="Personal website" /></a>
+
+<a href="#readme"><img src="./assets/divider-v5.svg" width="100%" alt="" /></a>
+
 </div>
 
-<h2>What teams can evaluate quickly</h2>
+## About
 
-<table width="100%">
-<tr>
-<td width="33%" valign="top"><h3>Role fit</h3><p>Frontend or full-stack engineer · HTML · JavaScript · TypeScript</p></td>
-<td width="33%" valign="top"><h3>Public proof</h3><p>4 repositories · 0 stars</p></td>
-<td width="33%" valign="top"><h3>Momentum</h3><p>45 contributions · 9 active days</p></td>
-</tr>
-</table>
+Your friendly neighborhood developer. BSc in Computer Science & Engineering at East West University, Bangladesh. I turn product ideas into working systems — from the first sketch in Figma to a shipped, polished release.
 
-<p><sub>Trying Out New Things...</sub></p>
+Frontend or full-stack: React and TypeScript on the surface, Spring Boot and Android underneath. Currently building in public and trying out new things.
 
-<h2>Proof at a glance</h2>
+<a href="#readme"><img src="./assets/divider-v5.svg" width="100%" alt="" /></a>
 
-<table width="100%">
-<tr>
-<td width="25%" align="center"><strong>4</strong><br /><sub>Repositories</sub></td>
-<td width="25%" align="center"><strong>0</strong><br /><sub>Stars</sub></td>
-<td width="25%" align="center"><strong>45</strong><br /><sub>Contributions</sub></td>
-<td width="25%" align="center"><strong>3</strong><br /><sub>Followers</sub></td>
-</tr>
-</table>
+## Projects
 
 <p align="center">
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stats?username=md-mahfujur-rahman-sujel&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&v=recruiter-stats-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/stats?username=md-mahfujur-rahman-sujel&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&v=recruiter-stats-1&mode=dark" width="100%" alt="Md Mahfujur Rahman Sujel GitHub proof metrics" />
-</picture>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><img src="./assets/project-apex-v5.svg" width="32%" alt="Apex Arcade — React launcher for 50 browser games" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><img src="./assets/project-unrot-v5.svg" width="32%" alt="Unrot — Android app blocker with a focus timer" /></a>
+<a href="https://github.com/masum-mir/Oppzy"><img src="./assets/project-oppzy-v5.svg" width="32%" alt="Oppzy — internship and research matching platform" /></a>
 </p>
 
+<a href="#readme"><img src="./assets/divider-v5.svg" width="100%" alt="" /></a>
 
+## Technology arsenal
 
-<h2>Selected work</h2>
+<a href="#readme"><img src="./assets/stack-v5.svg" width="100%" alt="JavaScript, TypeScript, React, HTML, CSS, Bootstrap, Figma, Java, Spring Boot, MySQL, Kotlin, Git, GitHub, Android Studio, UI/UX" /></a>
+
+<a href="#readme"><img src="./assets/divider-v5.svg" width="100%" alt="" /></a>
+
+## Telemetry
+
+<a href="https://github.com/md-mahfujur-rahman-sujel"><img src="./assets/telemetry.svg" width="100%" alt="Live GitHub telemetry: contributions, streaks, active days and languages by bytes" /></a>
+
+<a href="#readme"><img src="./assets/divider-v5.svg" width="100%" alt="" /></a>
+
+## Repositories
+
+<a href="https://github.com/md-mahfujur-rahman-sujel?tab=repositories"><img src="./assets/repos.svg" width="100%" alt="Repository index with live metadata for Apex Arcade, Unrot and Oppzy" /></a>
 
 <p align="center">
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/projects?username=md-mahfujur-rahman-sujel&amp;theme=github-dark&amp;avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&amp;repos=md-mahfujur-rahman-sujel%2FOppzy%2Cmd-mahfujur-rahman-sujel%2FApex-Arcade%2Cmd-mahfujur-rahman-sujel%2FUnrot&amp;v=recruiter-projects-1&amp;mode=light" />
-  <img src="https://www.gitskins.com/api/section/projects?username=md-mahfujur-rahman-sujel&amp;theme=github-dark&amp;avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&amp;repos=md-mahfujur-rahman-sujel%2FOppzy%2Cmd-mahfujur-rahman-sujel%2FApex-Arcade%2Cmd-mahfujur-rahman-sujel%2FUnrot&amp;v=recruiter-projects-1&amp;mode=dark" width="100%" alt="Selected projects graph" />
-</picture>
-
+<sub>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><b>Apex-Arcade</b></a> ·
+<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><b>Unrot</b></a> ·
+<a href="https://github.com/masum-mir/Oppzy"><b>Oppzy</b></a>
+</sub>
 </p>
 
-<table width="100%">
-<tr>
-<td width="33%" valign="top">
-<h3><a href="https://github.com/masum-mir/Oppzy">Oppzy ↗</a></h3>
-<p>A selected public project.</p>
-<p><sub>JavaScript · ⭐ 0</sub></p>
-<p><a href="https://github.com/masum-mir/Oppzy">View repository →</a></p>
-</td>
-<td width="33%" valign="top">
-<h3><a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade">Apex-Arcade ↗</a></h3>
-<p>Browser Based Game Hub</p>
-<p><sub>HTML · ⭐ 0</sub></p>
-<p><a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade">View repository →</a></p>
-</td>
-<td width="33%" valign="top">
-<h3><a href="https://github.com/md-mahfujur-rahman-sujel/Unrot">Unrot ↗</a></h3>
-<p>Android App Blocker</p>
-<p><sub>Kotlin · ⭐ 0</sub></p>
-<p><a href="https://github.com/md-mahfujur-rahman-sujel/Unrot">View repository →</a></p>
-</td>
-</tr>
-</table>
+<a href="#readme"><img src="./assets/divider-v5.svg" width="100%" alt="" /></a>
 
+## Activity
 
-<h2>Technical toolkit</h2>
+<a href="https://github.com/md-mahfujur-rahman-sujel"><img src="./assets/activity.svg" width="100%" alt="Recent public GitHub activity feed" /></a>
 
 <p align="center">
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stack?username=md-mahfujur-rahman-sujel&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&v=recruiter-stack-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/stack?username=md-mahfujur-rahman-sujel&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&v=recruiter-stack-1&mode=dark" width="100%" alt="Md Mahfujur Rahman Sujel technology stack" />
-</picture>
+<sub><a href="https://github.com/md-mahfujur-rahman-sujel">full contribution graph on GitHub ↗</a></sub>
 </p>
 
-<table width="100%">
-<tr>
-<td width="20%" align="center"><strong>HTML</strong><br /><sub>43% of public code</sub></td>
-<td width="20%" align="center"><strong>JavaScript</strong><br /><sub>25% of public code</sub></td>
-<td width="20%" align="center"><strong>TypeScript</strong><br /><sub>23% of public code</sub></td>
-<td width="20%" align="center"><strong>Kotlin</strong><br /><sub>9% of public code</sub></td>
-<td width="20%" align="center"><strong>CSS</strong><br /><sub>0% of public code</sub></td>
-</tr>
-</table>
+<a href="#readme"><img src="./assets/divider-v5.svg" width="100%" alt="" /></a>
 
-<h2>Consistency signal</h2>
-
-<p align="center">
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/heatmap?username=md-mahfujur-rahman-sujel&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&v=recruiter-heatmap-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/heatmap?username=md-mahfujur-rahman-sujel&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F310651921%3Fu%3Defca15966cef8e997e9a94a1fe9769055a631bd9%26v%3D4&v=recruiter-heatmap-1&mode=dark" width="100%" alt="Md Mahfujur Rahman Sujel contribution activity" />
-</picture>
-</p>
-
-<hr />
-
-<table width="100%">
-<tr>
-<td width="62%" valign="middle"><h2>Let’s talk about the next build</h2><p>Open to thoughtful teams, ambitious products, and useful engineering work.</p></td>
-<td width="38%" valign="middle" align="right"><a href="https://github.com/md-mahfujur-rahman-sujel">GitHub</a></td>
-</tr>
-</table>
-
-<p align="center"><sub>Md Mahfujur Rahman Sujel</sub></p>
+<div align="center"><sub>East West University · Bangladesh · <a href="https://github.com/md-mahfujur-rahman-sujel">github.com/md-mahfujur-rahman-sujel</a></sub></div>
