@@ -5,20 +5,24 @@ from __future__ import annotations
 
 import datetime as dt
 
-from common import REPO_ROOT, USER, clip, esc, fetch_events, now_utc, stamp
+from common import REPO_ROOT, USER, clip, corner_web, esc, fetch_events, now_utc, spider, stamp
 
-W, H = 1280, 384
-LOG_TOP = 88.0
-FOOTER = H - 42
+W, H = 1280, 430
+M = 56.0
+CONTENT_W = W - M * 2
+ROW_TOP = 160.0
+ROW_STEP = 32.0
+RAIL_X = 166.0
+EVENTS = 7
 
 BADGES = {
     "PushEvent": ("PUSH", "#FFB4B4"),
     "CreateEvent": ("CREATE", "#6C9FE0"),
-    "PublicEvent": ("PUBLIC", "#D9232E"),
+    "PublicEvent": ("PUBLIC", "#FF6B6B"),
     "WatchEvent": ("STAR", "#FFB4B4"),
     "ForkEvent": ("FORK", "#FF6B6B"),
-    "PullRequestEvent": ("PR", "#D9232E"),
-    "IssuesEvent": ("ISSUE", "#D9232E"),
+    "PullRequestEvent": ("PR", "#FF6B6B"),
+    "IssuesEvent": ("ISSUE", "#FF6B6B"),
     "ReleaseEvent": ("RELEASE", "#6C9FE0"),
     "DeleteEvent": ("DELETE", "#FF6B6B"),
     "CommitCommentEvent": ("COMMENT", "#6C9FE0"),
@@ -35,15 +39,11 @@ FALLBACK = [
 CSS = """
 .s{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif}
 .m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
-.pulse{animation:pulse 2.2s ease-in-out infinite}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.25}}
-.blink{animation:blink 1.1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.rise{animation:rise .55s cubic-bezier(.2,.7,.2,1) both}
-@keyframes rise{from{opacity:0;transform:translateY(7px)}}
-.sweep{animation:sweep 7.5s linear infinite}
-@keyframes sweep{from{transform:translateX(-380px)}to{transform:translateX(1320px)}}
-@media (prefers-reduced-motion:reduce){.pulse,.blink,.rise,.sweep{animation:none!important}}
+.rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+@media (prefers-reduced-motion:reduce){.pulse,.rise{animation:none!important}}
 """
 
 
@@ -114,7 +114,7 @@ def entries() -> tuple[list[dict], bool]:
                 "at": event.get("created_at", ""),
             }
         )
-        if len(rows) == 7:
+        if len(rows) == EVENTS:
             break
     if not rows:
         return sorted(FALLBACK, key=lambda row: row["at"], reverse=True), True
@@ -131,95 +131,66 @@ def render() -> str:
         f'aria-label="Recent public GitHub activity for {esc(USER)}">'
     )
     out.append("<defs>")
-    out.append('<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#060A13"/><stop offset=".55" stop-color="#0A1120"/><stop offset="1" stop-color="#060A13"/></linearGradient>')
-    out.append('<linearGradient id="scanline" x1="0" x2="1"><stop offset="0" stop-color="#6C9FE0" stop-opacity="0"/><stop offset=".5" stop-color="#6C9FE0" stop-opacity=".08"/><stop offset="1" stop-color="#6C9FE0" stop-opacity="0"/></linearGradient>')
-    out.append('<radialGradient id="bloomBlue"><stop offset="0" stop-color="#D9232E" stop-opacity=".18"/><stop offset="1" stop-color="#D9232E" stop-opacity="0"/></radialGradient>')
-    out.append('<radialGradient id="bloomCyan"><stop offset="0" stop-color="#6C9FE0" stop-opacity=".12"/><stop offset="1" stop-color="#6C9FE0" stop-opacity="0"/></radialGradient>')
-    out.append('<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1E2C48" stroke-opacity=".14"/></pattern>')
-    out.append('<pattern id="scan" width="6" height="4" patternUnits="userSpaceOnUse"><rect width="6" height="1" fill="#000000" opacity=".14"/></pattern>')
-    out.append(f'<clipPath id="win"><rect width="{W}" height="{H}" rx="20"/></clipPath>')
-    out.append(f'<clipPath id="body"><rect x="0" y="{LOG_TOP}" width="{W}" height="{FOOTER - LOG_TOP}"/></clipPath>')
+    out.append('<linearGradient id="bg" x1="0" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="#070C16"/><stop offset=".55" stop-color="#0A1223"/><stop offset="1" stop-color="#060A13"/></linearGradient>')
+    out.append('<radialGradient id="glowRed"><stop offset="0" stop-color="#D9232E" stop-opacity=".16"/><stop offset="1" stop-color="#D9232E" stop-opacity="0"/></radialGradient>')
+    out.append('<radialGradient id="glowBlue"><stop offset="0" stop-color="#6C9FE0" stop-opacity=".12"/><stop offset="1" stop-color="#6C9FE0" stop-opacity="0"/></radialGradient>')
+    out.append(f'<clipPath id="frame"><rect width="{W}" height="{H}" rx="18"/></clipPath>')
     out.append(f"<style>{CSS}</style>")
     out.append("</defs>")
 
-    out.append('<g clip-path="url(#win)">')
+    out.append('<g clip-path="url(#frame)">')
     out.append(f'<rect width="{W}" height="{H}" fill="url(#bg)"/>')
-    out.append(f'<rect width="{W}" height="{H}" fill="url(#grid)"/>')
-    out.append('<ellipse cx="200" cy="140" rx="380" ry="260" fill="url(#bloomBlue)"/>')
-    out.append('<ellipse cx="1080" cy="260" rx="380" ry="230" fill="url(#bloomCyan)"/>')
-    out.append('<g fill="none" stroke="#F5F8FC" stroke-width="1" stroke-opacity=".05"><path d="M1280 0L1231 598M1280 0L1079 553M1280 0L943 477M1280 0L833 367M1280 0L757 231M1280 0L722 79"/><path d="M1280 180A180 180 0 0 1 1100 0M1280 320A320 320 0 0 1 960 0M1280 460A460 460 0 0 1 820 0M1280 600A600 600 0 0 1 680 0"/></g>')
+    out.append('<ellipse cx="80" cy="430" rx="460" ry="280" fill="url(#glowRed)"/>')
+    out.append('<ellipse cx="1230" cy="0" rx="380" ry="240" fill="url(#glowBlue)"/>')
+    out.append(corner_web(1288, 22, 205, spokes=9, rings=(0.42, 0.72, 1.0), rotation=2.2, opacity=0.13, width=1.5))
+    out.append(spider(676, 60, 1.0, thread=60, opacity=0.5))
 
-    # window chrome
-    out.append('<rect width="1280" height="46" fill="#0A1121" fill-opacity=".94"/><rect y="45" width="1280" height="1" fill="#1E2C48"/>')
-    out.append('<circle cx="22" cy="23" r="5.5" fill="#D9232E" fill-opacity=".8" stroke="#D9232E"/><circle cx="40" cy="23" r="5.5" fill="#FFB4B4" fill-opacity=".8" stroke="#FFB4B4"/><circle cx="58" cy="23" r="5.5" fill="#6C9FE0" fill-opacity=".7" stroke="#6C9FE0"/>')
-    out.append('<text class="m" x="640" y="28" text-anchor="middle" font-size="12" fill="#9BACC0">sujel@ewu: ~/activity.log — tail -f</text>')
-    out.append('<rect x="1000" y="11" width="86" height="24" rx="12" fill="#D9232E" fill-opacity=".16" stroke="#D9232E" stroke-opacity=".8"/>')
-    out.append('<circle class="pulse" cx="1018" cy="23" r="3" fill="#D9232E"/><text class="m" x="1027" y="27" font-size="9" letter-spacing="1.4" fill="#F5F8FC">LIVE</text>')
-    out.append(f'<text class="m" x="1258" y="27" text-anchor="end" font-size="10.5" fill="#8FA1B6">{esc(stamp(now))}</text>')
+    out.append('<g class="rise">')
+    out.append('<circle class="pulse" cx="62" cy="48" r="3.5" fill="#D9232E"/>')
+    out.append('<text class="m" x="78" y="52" font-size="11" letter-spacing="2.6" fill="#FF9A9A">PUBLIC FEED</text>')
+    out.append('<text class="s" x="56" y="106" font-size="32" font-weight="800" letter-spacing="-.4" fill="#F5F8FC">Signals</text>')
+    out.append(
+        f'<text class="m" x="1224" y="52" text-anchor="end" font-size="10.5" fill="#8FA1B6">'
+        f'{len(rows):02d} EVENTS · AUTO-SYNC EVERY 3H</text>'
+    )
+    out.append(f'<text class="m" x="1224" y="106" text-anchor="end" font-size="10.5" fill="#6D7E94">{esc(stamp(now))}</text>')
+    out.append(f'<rect x="{M}" y="124" width="{CONTENT_W}" height="1" fill="#1E2C48" fill-opacity=".8"/>')
+    out.append("</g>")
 
-    # tab strip
-    out.append('<rect y="46" width="1280" height="42" fill="#080E1A" fill-opacity=".9"/><rect y="87" width="1280" height="1" fill="#1E2C48"/>')
-    out.append('<rect x="20" y="53" width="116" height="25" rx="6" fill="#D9232E" fill-opacity=".14" stroke="#1E2C48" stroke-opacity=".65"/><rect x="20" y="76" width="116" height="2" fill="#FFB4B4"/>')
-    out.append('<text class="m" x="78" y="70" text-anchor="middle" font-size="10.5" letter-spacing="1.4" fill="#F5F8FC">PUBLIC FEED</text>')
-    out.append(f'<text class="m" x="156" y="70" font-size="10.5" letter-spacing="1.4" fill="#8FA1B6">EVENTS {len(rows):02d}</text>')
-    out.append('<text class="m" x="252" y="70" font-size="10.5" letter-spacing="1.4" fill="#8FA1B6">RAW JSON</text>')
-    out.append('<text class="m" x="1258" y="70" text-anchor="end" font-size="10" letter-spacing="1" fill="#6C9FE0">AUTO-SYNC · 3H</text>')
+    rail_top = ROW_TOP - 18
+    rail_bottom = ROW_TOP + (EVENTS - 1) * ROW_STEP + 12
+    out.append(f'<rect x="{RAIL_X - 0.5}" y="{rail_top:.1f}" width="1" height="{rail_bottom - rail_top:.1f}" fill="#1E2C48" fill-opacity=".8"/>')
 
-    # log lines
-    out.append('<g clip-path="url(#body)">')
     for index, row in enumerate(rows):
-        baseline = 120.0 + index * 29.0
+        baseline = ROW_TOP + index * ROW_STEP
         label, color = BADGES.get(row["type"], ("EVENT", "#8FA1B6"))
         tint = "#FFDADA" if color == "#D9232E" else color
-        delay = 0.07 * index
-        out.append(f'<g class="rise" style="animation-delay:{delay:.2f}s">')
-        if index == 0:
-            out.append(f'<rect x="12" y="{baseline - 19:.1f}" width="1256" height="26" rx="6" fill="{color}" fill-opacity=".055"/>')
-            out.append(f'<rect x="12" y="{baseline - 19:.1f}" width="2.5" height="26" rx="1.2" fill="{color}" fill-opacity=".8"/>')
-        out.append(f'<text class="m" x="24" y="{baseline:.1f}" font-size="9.5" fill="#5C6D85">{index + 1:03d}</text>')
+        out.append(f'<g class="rise" style="animation-delay:{0.05 + 0.05 * index:.2f}s">')
         try:
             moment = dt.datetime.fromisoformat(row["at"].replace("Z", "+00:00"))
             when = moment.strftime("%d %b · %H:%M").upper()
         except (ValueError, AttributeError):
             when = "—"
-        out.append(f'<text class="m" x="58" y="{baseline:.1f}" font-size="11" fill="#8FA1B6">{when}</text>')
-        badge_w = 74
+        out.append(f'<text class="m" x="{RAIL_X - 24:.1f}" y="{baseline:.1f}" text-anchor="end" font-size="10.5" fill="#6D7E94">{ago(row["at"])}</text>')
+        out.append(f'<circle cx="{RAIL_X}" cy="{baseline - 4:.1f}" r="4" fill="#0A1223" stroke="{color}" stroke-width="1.6"/>')
+        out.append(f'<text class="m" x="{RAIL_X + 22:.1f}" y="{baseline:.1f}" font-size="10" letter-spacing="1.8" fill="{tint}">{label}</text>')
         out.append(
-            f'<rect x="170" y="{baseline - 13:.1f}" width="{badge_w}" height="19" rx="4" '
-            f'fill="{color}" fill-opacity=".12" stroke="{color}" stroke-opacity=".55"/>'
+            f'<text class="s" x="{RAIL_X + 118:.1f}" y="{baseline:.1f}" font-size="14" fill="#E7EEF7">'
+            f'{esc(clip(row["text"], 70))}<tspan fill="{tint}" fill-opacity=".9">  ·  {esc(clip(row["repo"], 40))}</tspan></text>'
         )
-        out.append(
-            f'<text class="m" x="{170 + badge_w / 2:.1f}" y="{baseline - 0.5:.1f}" text-anchor="middle" '
-            f'font-size="9.5" letter-spacing="1.1" fill="{tint}">{label}</text>'
-        )
-        out.append(
-            f'<text class="m" x="262" y="{baseline:.1f}" font-size="12.5" fill="#E7EEF7">{esc(clip(row["text"], 84))}'
-            f'<tspan fill="{tint}" fill-opacity=".9">  ·  {esc(clip(row["repo"], 40))}</tspan></text>'
-        )
-        out.append(f'<text class="m" x="1258" y="{baseline:.1f}" text-anchor="end" font-size="10" fill="#8FA1B6">{ago(row["at"])}</text>')
+        out.append(f'<text class="m" x="1224" y="{baseline:.1f}" text-anchor="end" font-size="10.5" fill="#6D7E94">{when}</text>')
         out.append("</g>")
-    out.append('<rect class="sweep" x="0" y="88" width="380" height="242" fill="url(#scanline)"/>')
-    out.append("</g>")
 
-    # prompt
-    command = "tail -f activity.log"
-    cursor_x = 128 + len(command) * 6.95 + 6
-    out.append(f'<text class="m" x="24" y="{FOOTER - 18:.1f}" font-size="11.5" fill="#6C9FE0">sujel@ewu<tspan fill="#8FA1B6">:~$</tspan></text>')
-    out.append(f'<text class="m" x="128" y="{FOOTER - 18:.1f}" font-size="11.5" fill="#B6C3D4">{command}</text>')
-    out.append(f'<rect class="blink" x="{cursor_x:.1f}" y="{FOOTER - 28:.1f}" width="7" height="13" fill="#FFB4B4" fill-opacity=".85"/>')
-
-    # footer
-    out.append(f'<rect y="{FOOTER}" width="1280" height="42" fill="#080E1A" fill-opacity=".94"/><rect y="{FOOTER}" width="1280" height="1" fill="#1E2C48"/>')
-    out.append(f'<text class="m" x="20" y="{FOOTER + 26}" font-size="10.5" fill="#8FA1B6">{len(rows)} events · public feed · last 30</text>')
     status = "CACHED SNAPSHOT" if cached else "STREAM OK"
     status_color = "#C08A1E" if cached else "#6C9FE0"
-    out.append(f'<circle class="pulse" cx="356" cy="{FOOTER + 22}" r="3" fill="{status_color}"/>')
-    out.append(f'<text class="m" x="366" y="{FOOTER + 26}" font-size="10.5" fill="{status_color}">{status}</text>')
-    out.append(f'<text class="m" x="1260" y="{FOOTER + 26}" text-anchor="end" font-size="10.5" fill="#8FA1B6">github.com/{esc(USER)}</text>')
+    out.append(f'<rect x="{M}" y="376" width="{CONTENT_W}" height="1" fill="#1E2C48" fill-opacity=".7"/>')
+    out.append(f'<circle class="pulse" cx="62" cy="404" r="3" fill="{status_color}"/>')
+    out.append(f'<text class="m" x="76" y="408" font-size="11" fill="{status_color}">{status}</text>')
+    out.append(f'<text class="m" x="196" y="408" font-size="11" fill="#8FA1B6">public events · newest first</text>')
+    out.append(f'<text class="m" x="1224" y="408" text-anchor="end" font-size="11" fill="#6D7E94">github.com/{esc(USER)}</text>')
 
-    out.append(f'<rect width="{W}" height="{H}" fill="url(#scan)"/>')
+    out.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="18" fill="none" stroke="#1E2C48" stroke-opacity=".4"/>')
     out.append("</g>")
-    out.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="20" fill="none" stroke="#1E2C48" stroke-opacity=".45"/>')
     out.append("</svg>")
     return "".join(out)
 

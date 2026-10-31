@@ -307,3 +307,89 @@ def relative_day(value: str | None) -> str:
     if delta < 365:
         return f"{delta // 30}mo ago"
     return f"{delta // 365}y ago"
+
+
+def _n(value: float) -> str:
+    text = f"{value:.1f}".rstrip("0").rstrip(".")
+    return "0" if text in ("-0", "") else text
+
+
+def corner_web(
+    cx: float,
+    cy: float,
+    radius: float,
+    spokes: int = 9,
+    rings: tuple[float, ...] = (0.42, 0.72, 1.0),
+    rotation: float = 0.0,
+    color: str = "#E4EDF9",
+    opacity: float = 0.08,
+    width: float = 1.1,
+    sag: float = 0.9,
+) -> str:
+    """A faint radial web anchored at (cx, cy); arcs sag between spokes."""
+
+    import math
+
+    steps = [rotation + 2 * math.pi * i / spokes for i in range(spokes)]
+    hub = f"M{_n(cx)} {_n(cy)}"
+    lines = [
+        f"{hub}L{_n(cx + radius * math.cos(a))} {_n(cy + radius * math.sin(a))}"
+        for a in steps
+    ]
+    arcs = []
+    for fraction in rings:
+        r = radius * fraction
+        start = (cx + r * math.cos(steps[0]), cy + r * math.sin(steps[0]))
+        arc = f"M{_n(start[0])} {_n(start[1])}"
+        for index in range(spokes):
+            nxt = steps[(index + 1) % spokes]
+            mid = (steps[index] + (nxt if index + 1 < spokes else steps[0] + 2 * math.pi)) / 2
+            control = (cx + r * sag * math.cos(mid), cy + r * sag * math.sin(mid))
+            end = (cx + r * math.cos(nxt), cy + r * math.sin(nxt))
+            arc += f"Q{_n(control[0])} {_n(control[1])} {_n(end[0])} {_n(end[1])}"
+        arcs.append(arc + "Z")
+    return (
+        f'<g fill="none" stroke="{color}" stroke-opacity="{opacity}" stroke-width="{width}" '
+        f'stroke-linecap="round"><path d="{"".join(lines)}"/><path d="{"".join(arcs)}"/></g>'
+    )
+
+
+def spider(
+    x: float,
+    y: float,
+    scale: float = 1.0,
+    rotation: float = 0.0,
+    color: str = "#C7D3E3",
+    opacity: float = 0.55,
+    thread: float = 0.0,
+) -> str:
+    """Small decorative spider; `thread` adds a strand hanging above it."""
+
+    legs = (
+        "M-4.5 -6C-11 -11-13.5 -17.5-9 -22.5"
+        "M-5.2 -2.4C-12.5 -5-16.5 -9.5-19 -14"
+        "M-5 1.2C-13 3.4-17.5 8.5-19.5 13.5"
+        "M-4.2 5.2C-11 10-12.5 16.5-8.5 21.5"
+        "M4.5 -6C11 -11 13.5 -17.5 9 -22.5"
+        "M5.2 -2.4C12.5 -5 16.5 -9.5 19 -14"
+        "M5 1.2C13 3.4 17.5 8.5 19.5 13.5"
+        "M4.2 5.2C11 10 12.5 16.5 8.5 21.5"
+    )
+    strand = (
+        f'<path d="M0 {_n(-thread)}L0 -10.5" stroke="{color}" stroke-width="1" '
+        f'stroke-opacity=".35"/>'
+        if thread > 0
+        else ""
+    )
+    return (
+        f'<g transform="translate({_n(x)} {_n(y)}) rotate({_n(rotation)}) scale({scale})">'
+        f"{strand}"
+        f'<path d="{legs}" fill="none" stroke="{color}" stroke-width="1.15" '
+        f'stroke-linecap="round" opacity="{opacity}"/>'
+        f'<ellipse cx="0" cy="1" rx="5.4" ry="7.4" fill="{color}" opacity="{min(opacity + .2, .95):.2f}"/>'
+        f'<ellipse cx="0" cy="-.5" rx="2.1" ry="2.6" fill="#8FA1B6" opacity=".6"/>'
+        f'<circle cx="0" cy="-7.6" r="3.2" fill="{color}" opacity="{min(opacity + .2, .95):.2f}"/>'
+        f'<circle cx="-1.3" cy="-8.6" r=".75" fill="#D9232E"/>'
+        f'<circle cx="1.3" cy="-8.6" r=".75" fill="#D9232E"/>'
+        f'</g>'
+    )
