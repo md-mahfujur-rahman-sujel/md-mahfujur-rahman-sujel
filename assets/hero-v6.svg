@@ -27,7 +27,11 @@
 @keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
 .pulse{animation:pulse 2.6s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.3}}
-@media (prefers-reduced-motion:reduce){.rise,.spin,.sway,.pulse{animation:none!important}.rise{opacity:1!important}}
+.web{animation:web 9s ease-in-out infinite}
+@keyframes web{0%,100%{opacity:.7}50%{opacity:1}}
+.bob{animation:bob 5.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3.2px)}}
+@media (prefers-reduced-motion:reduce){.rise,.spin,.sway,.pulse,.web,.bob{animation:none!important}.rise{opacity:1!important}}
 </style>
 </defs>
 <g clip-path="url(#frame)">
@@ -36,7 +40,7 @@
 <ellipse cx="1180" cy="40" rx="460" ry="300" fill="url(#glowBlue)"/>
 <g mask="url(#dotsMask)"><rect x="600" width="680" height="460" fill="url(#dots)" opacity=".10"/></g>
 
-<g clip-path="url(#rightHalf)" fill="none" stroke="#E4EDF9">
+<g class="web" style="animation-delay:-2.6s" clip-path="url(#rightHalf)" fill="none" stroke="#E4EDF9">
 <g stroke-opacity=".12" stroke-width="1.2">
 <path d="M1352 -70L1073 460M1352 -70L948 460M1352 -70L1198 460M1352 -70L1246 460M1352 -70L1310 460M1352 -70L914 300M1352 -70L1000 120M1352 -70L1150 -20M1352 -70L1290 200"/>
 </g>
@@ -49,12 +53,12 @@
 </g>
 </g>
 
-<g fill="none" stroke="#E4EDF9" stroke-opacity=".1" stroke-width="1.1">
+<g class="web" style="animation-delay:-5.4s" fill="none" stroke="#E4EDF9" stroke-opacity=".1" stroke-width="1.1">
 <path d="M-10 -20L236 -20M-10 -20L210 96M-10 -20L130 180M-10 -20L30 240M-10 -20L-40 210"/>
 <circle cx="-10" cy="-20" r="120"/><circle cx="-10" cy="-20" r="190"/><circle cx="-10" cy="-20" r="260"/>
 </g>
 
-<g fill="none" stroke="#E4EDF9" stroke-opacity=".08" stroke-width="1">
+<g class="web" style="animation-delay:-7.4s" fill="none" stroke="#E4EDF9" stroke-opacity=".08" stroke-width="1">
 <path d="M1310 500L1090 300M1310 500L1040 380M1310 500L1120 460M1310 500L1190 500"/>
 <circle cx="1310" cy="500" r="120"/><circle cx="1310" cy="500" r="200"/>
 </g>
@@ -109,6 +113,7 @@
 </g>
 
 <g class="rise d5">
+<g class="bob">
 <g transform="translate(1160 142) rotate(22) scale(.85)">
 <g fill="none" stroke="#C7D3E3" stroke-width="1.15" stroke-linecap="round" opacity=".55">
 <path d="M-4.5 -6 C-11 -11 -13.5 -17.5 -9 -22.5"/>
@@ -122,6 +127,7 @@
 </g>
 <ellipse cx="0" cy="1" rx="5.4" ry="7.4" fill="#C7D3E3" opacity=".6"/>
 <circle cx="0" cy="-7.6" r="3.2" fill="#C7D3E3" opacity=".6"/>
+</g>
 </g>
 </g>
 

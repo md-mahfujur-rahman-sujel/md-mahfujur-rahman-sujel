@@ -10,19 +10,25 @@
 @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .pulse{animation:pulse 2.8s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.35}}
-@media (prefers-reduced-motion:reduce){.rise,.pulse{animation:none!important}}
+.web{animation:web 9s ease-in-out infinite}
+@keyframes web{0%,100%{opacity:.7}50%{opacity:1}}
+.float{animation:float 5.2s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.4px)}}
+@media (prefers-reduced-motion:reduce){.rise,.pulse,.web,.float{animation:none!important}}
 </style>
 </defs>
 <g clip-path="url(#frame)">
 <rect width="400" height="300" fill="url(#bg)"/>
 <ellipse cx="40" cy="10" rx="240" ry="150" fill="url(#bloom)"/>
-<g fill="none" stroke="#E4EDF9" stroke-opacity=".10">
+<g class="web" fill="none" stroke="#E4EDF9" stroke-opacity=".10">
 <path d="M400 0L352 58M400 0L332 40M400 0L330 22"/>
 </g>
 <g opacity=".5" fill="none" stroke="#A8B5C7" stroke-width="1" stroke-linecap="round">
+<g class="float" style="animation-delay:-1.6s">
 <g transform="translate(352 20) rotate(18) scale(.5)">
 <path d="M-4.5 -6 C-11 -11 -13.5 -17.5 -9 -22.5"/><path d="M-5.2 -2.4 C-12.5 -5 -16.5 -9.5 -19 -14"/><path d="M-5 1.2 C-13 3.4 -17.5 8.5 -19.5 13.5"/><path d="M-4.2 5.2 C-11 10 -12.5 16.5 -8.5 21.5"/><path d="M4.5 -6 C11 -11 13.5 -17.5 9 -22.5"/><path d="M5.2 -2.4 C12.5 -5 16.5 -9.5 19 -14"/><path d="M5 1.2 C13 3.4 17.5 8.5 19.5 13.5"/><path d="M4.2 5.2 C11 10 12.5 16.5 8.5 21.5"/>
 <ellipse cx="0" cy="1" rx="5.4" ry="7.4" fill="#A8B5C7" stroke="none"/><circle cx="0" cy="-7.6" r="3.2" fill="#A8B5C7" stroke="none"/>
+</g>
 </g>
 </g>
 

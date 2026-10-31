@@ -45,7 +45,11 @@ CSS = """
 @keyframes wv{from{transform:scaleY(0)}}
 .rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
 @keyframes rise{from{opacity:0;transform:translateY(10px)}}
-@media (prefers-reduced-motion:reduce){.pulse,.grow,.wv,.rise{animation:none!important}}
+.web{animation:web 9s ease-in-out infinite}
+@keyframes web{0%,100%{opacity:.7}50%{opacity:1}}
+.swing{transform-box:view-box;animation:swing 6.8s ease-in-out infinite}
+@keyframes swing{0%,100%{transform:rotate(-3.4deg)}50%{transform:rotate(3.4deg)}}
+@media (prefers-reduced-motion:reduce){.pulse,.grow,.wv,.rise,.web,.swing{animation:none!important}}
 """
 
 

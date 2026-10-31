@@ -58,7 +58,11 @@ CSS = """
 @keyframes pulse{50%{opacity:.25}}
 .rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
 @keyframes rise{from{opacity:0;transform:translateY(10px)}}
-@media (prefers-reduced-motion:reduce){.pulse,.rise{animation:none!important}}
+.web{animation:web 9s ease-in-out infinite}
+@keyframes web{0%,100%{opacity:.7}50%{opacity:1}}
+.swing{transform-box:view-box;animation:swing 6.2s ease-in-out infinite}
+@keyframes swing{0%,100%{transform:rotate(-3.4deg)}50%{transform:rotate(3.4deg)}}
+@media (prefers-reduced-motion:reduce){.pulse,.rise,.web,.swing{animation:none!important}}
 """
 
 
