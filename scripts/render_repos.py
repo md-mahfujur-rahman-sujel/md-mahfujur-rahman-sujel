@@ -51,18 +51,12 @@ REPOS = [
     },
 ]
 
+# Panel SVGs are rasterized by GitHub's mobile client as <img>; CSS keyframe
+# animations make it composite stale frames (flicker and burnt-in "dead pixels"),
+# so the panels ship static. The markup is the settled animation frame.
 CSS = """
 .s{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif}
 .m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
-.pulse{animation:pulse 2.4s ease-in-out infinite}
-@keyframes pulse{50%{opacity:.25}}
-.rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
-@keyframes rise{from{opacity:0;transform:translateY(10px)}}
-.web{animation:web 9s ease-in-out infinite}
-@keyframes web{0%,100%{opacity:.7}50%{opacity:1}}
-.swing{transform-box:view-box;animation:swing 6.2s ease-in-out infinite}
-@keyframes swing{0%,100%{transform:rotate(-3.4deg)}50%{transform:rotate(3.4deg)}}
-@media (prefers-reduced-motion:reduce){.pulse,.rise,.web,.swing{animation:none!important}}
 """
 
 
@@ -114,8 +108,8 @@ def render() -> str:
     out.append(corner_web(1288, 22, 205, spokes=9, rings=(0.42, 0.72, 1.0), rotation=2.2, opacity=0.13, width=1.5))
     out.append(spider(762, 62, 1.0, thread=62, opacity=0.5))
 
-    out.append('<g class="rise">')
-    out.append('<circle class="pulse" cx="62" cy="48" r="3.5" fill="#D9232E"/>')
+    out.append('<g>')
+    out.append('<circle cx="62" cy="48" r="3.5" fill="#D9232E"/>')
     out.append('<text class="m" x="78" y="52" font-size="11" letter-spacing="2.6" fill="#FF9A9A">REPOSITORIES · LIVE</text>')
     out.append('<text class="s" x="56" y="106" font-size="32" font-weight="800" letter-spacing="-.4" fill="#F5F8FC">Case files</text>')
     out.append(
@@ -132,7 +126,7 @@ def render() -> str:
         lang_color = LANG_COLORS.get(repo["language"], accent)
         updated = "PENDING" if repo["updated"] == "—" else repo["updated"].upper()
         ownership = "OWNED" if repo["owner"] == USER else "COLLABORATOR"
-        out.append(f'<g class="rise" style="animation-delay:{0.06 + 0.08 * index:.2f}s">')
+        out.append('<g>')
         if index:
             out.append(f'<rect x="{M}" y="{y - 2:.1f}" width="{CONTENT_W}" height="1" fill="#1E2C48" fill-opacity=".55"/>')
         out.append(f'<rect x="{M}" y="{y + 18:.1f}" width="3" height="46" rx="1.5" fill="{accent}"/>')
@@ -152,7 +146,7 @@ def render() -> str:
     status_color = "#C08A1E" if cached else "#6C9FE0"
     footer_y = ROW_TOP + ROWS * ROW_H + 6
     out.append(f'<rect x="{M}" y="{footer_y:.1f}" width="{CONTENT_W}" height="1" fill="#1E2C48" fill-opacity=".7"/>')
-    out.append(f'<circle class="pulse" cx="62" cy="{footer_y + 30:.1f}" r="3" fill="{status_color}"/>')
+    out.append(f'<circle cx="62" cy="{footer_y + 30:.1f}" r="3" fill="{status_color}"/>')
     out.append(f'<text class="m" x="76" y="{footer_y + 34:.1f}" font-size="11" fill="{status_color}">{status}</text>')
     out.append(f'<text class="m" x="{M + 120}" y="{footer_y + 34:.1f}" font-size="11" fill="#8FA1B6">live metadata · refreshed every three hours</text>')
     out.append(f'<text class="m" x="1224" y="{footer_y + 34:.1f}" text-anchor="end" font-size="11" fill="#6D7E94">github.com/{esc(USER)}?tab=repositories</text>')

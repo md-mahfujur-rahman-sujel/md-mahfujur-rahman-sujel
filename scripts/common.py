@@ -349,7 +349,7 @@ def corner_web(
             arc += f"Q{_n(control[0])} {_n(control[1])} {_n(end[0])} {_n(end[1])}"
         arcs.append(arc + "Z")
     return (
-        f'<g class="web" fill="none" stroke="{color}" stroke-opacity="{opacity}" stroke-width="{width}" '
+        f'<g fill="none" stroke="{color}" stroke-opacity="{opacity}" stroke-width="{width}" '
         f'stroke-linecap="round"><path d="{"".join(lines)}"/><path d="{"".join(arcs)}"/></g>'
     )
 
@@ -393,7 +393,4 @@ def spider(
         f'<circle cx="1.3" cy="-8.6" r=".75" fill="#D9232E"/>'
         f'</g>'
     )
-    if thread <= 0:
-        return body
-    # Swing the strand from its anchor point so the whole thread moves with the body.
-    return f'<g class="swing" style="transform-origin:{_n(x)}px 0">{body}</g>'
+    return body

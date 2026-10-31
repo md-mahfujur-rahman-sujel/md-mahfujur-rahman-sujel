@@ -34,28 +34,18 @@ LANG_X, LANG_W = 56.0, 540.0
 CHART_X, CHART_W = 656.0, 568.0
 CHART_BASE, CHART_H = 470.0, 130.0
 
+# Panel SVGs are rasterized by GitHub's mobile client as <img>; CSS keyframe
+# animations make it composite stale frames (flicker and burnt-in "dead pixels"),
+# so the panels ship static. The markup is the settled animation frame.
 CSS = """
 .s{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif}
 .m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
-.pulse{animation:pulse 2.4s ease-in-out infinite}
-@keyframes pulse{50%{opacity:.25}}
-.grow{transform-box:fill-box;transform-origin:left center;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
-@keyframes grow{from{transform:scaleX(0)}}
-.wv{transform-box:fill-box;transform-origin:center bottom;animation:wv .8s cubic-bezier(.2,.7,.2,1) both}
-@keyframes wv{from{transform:scaleY(0)}}
-.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
-@keyframes rise{from{opacity:0;transform:translateY(10px)}}
-.web{animation:web 9s ease-in-out infinite}
-@keyframes web{0%,100%{opacity:.7}50%{opacity:1}}
-.swing{transform-box:view-box;animation:swing 6.8s ease-in-out infinite}
-@keyframes swing{0%,100%{transform:rotate(-3.4deg)}50%{transform:rotate(3.4deg)}}
-@media (prefers-reduced-motion:reduce){.pulse,.grow,.wv,.rise,.web,.swing{animation:none!important}}
 """
 
 
-def metric(x: float, label: str, value: str, sub: str, color: str, delay: float) -> str:
+def metric(x: float, label: str, value: str, sub: str, color: str) -> str:
     return (
-        f'<g class="rise" style="animation-delay:{delay:.2f}s">'
+        '<g>'
         f'<text class="m" x="{x}" y="170" font-size="10.5" letter-spacing="2.2" fill="#8FA1B6">{label}</text>'
         f'<text class="s" x="{x}" y="230" font-size="56" font-weight="800" fill="{color}">{value}</text>'
         f'<text class="m" x="{x}" y="254" font-size="11.5" fill="#8FA1B6">{sub}</text>'
@@ -166,8 +156,8 @@ def render() -> str:
     out.append(spider(704, 64, 1.05, thread=64, opacity=0.55))
 
     # masthead
-    out.append('<g class="rise">')
-    out.append(f'<circle class="pulse" cx="62" cy="48" r="3.5" fill="#D9232E"/>')
+    out.append('<g>')
+    out.append(f'<circle cx="62" cy="48" r="3.5" fill="#D9232E"/>')
     out.append('<text class="m" x="78" y="52" font-size="11" letter-spacing="2.6" fill="#FF9A9A">LIVE · SPIDER-SENSE</text>')
     out.append(f'<text class="m" x="1224" y="52" text-anchor="end" font-size="10.5" fill="#8FA1B6">{esc(stamp(now))}</text>')
     out.append('<text class="s" x="56" y="102" font-size="32" font-weight="800" letter-spacing="-.4" fill="#F5F8FC">Contribution pulse</text>')
@@ -175,15 +165,15 @@ def render() -> str:
     out.append("</g>")
 
     # four headline numerals
-    out.append(metric(METRIC_X[0], "CONTRIBUTIONS", str(stats["total"]), "LAST 12 MONTHS", "#F5F8FC", 0.05))
-    out.append(metric(METRIC_X[1], "CURRENT STREAK", str(stats["current"]), current_sub, "#FF6B6B", 0.12))
-    out.append(metric(METRIC_X[2], "LONGEST STREAK", str(stats["longest"]), longest_sub, "#F5F8FC", 0.19))
-    out.append(metric(METRIC_X[3], "ACTIVE DAYS", str(stats["active_days"]), f"OF {window_days} · {consistency:.1f}% CONSISTENT", "#6C9FE0", 0.26))
+    out.append(metric(METRIC_X[0], "CONTRIBUTIONS", str(stats["total"]), "LAST 12 MONTHS", "#F5F8FC"))
+    out.append(metric(METRIC_X[1], "CURRENT STREAK", str(stats["current"]), current_sub, "#FF6B6B"))
+    out.append(metric(METRIC_X[2], "LONGEST STREAK", str(stats["longest"]), longest_sub, "#F5F8FC"))
+    out.append(metric(METRIC_X[3], "ACTIVE DAYS", str(stats["active_days"]), f"OF {window_days} · {consistency:.1f}% CONSISTENT", "#6C9FE0"))
     for x in (328.0, 616.0, 904.0):
         out.append(f'<rect x="{x}" y="146" width="1" height="118" fill="#1E2C48" fill-opacity=".55"/>')
 
     # languages
-    out.append('<g class="rise" style="animation-delay:.32s">')
+    out.append('<g>')
     out.append(f'<text class="m" x="{LANG_X}" y="306" font-size="10.5" letter-spacing="2.2" fill="#8FA1B6">BYTES BY LANGUAGE</text>')
     out.append(f'<text class="m" x="{LANG_X + LANG_W}" y="306" text-anchor="end" font-size="10.5" fill="#6D7E94">{total_bytes / 1_000_000:.1f} MB · OWN REPOS</text>')
     if top_languages:
@@ -196,13 +186,13 @@ def render() -> str:
             out.append(f'<text class="m" x="{LANG_X + LANG_W}" y="{baseline}" text-anchor="end" font-size="12" fill="{text_color}">{pct:.1f}%</text>')
             out.append(f'<rect x="{LANG_X}" y="{baseline + 10}" width="{LANG_W}" height="4" rx="2" fill="#101A2E"/>')
             out.append(
-                f'<rect class="grow" x="{LANG_X}" y="{baseline + 10}" width="{LANG_W * pct / 100:.1f}" height="4" '
-                f'rx="2" fill="{color}" style="animation-delay:{0.08 * index:.2f}s"/>'
+                f'<rect x="{LANG_X}" y="{baseline + 10}" width="{LANG_W * pct / 100:.1f}" height="4" '
+                f'rx="2" fill="{color}"/>'
             )
     out.append("</g>")
 
     # weekly chart
-    out.append('<g class="rise" style="animation-delay:.38s">')
+    out.append('<g>')
     out.append(f'<text class="m" x="{CHART_X}" y="306" font-size="10.5" letter-spacing="2.2" fill="#8FA1B6">52-WEEK ACTIVITY</text>')
     out.append(
         f'<text class="m" x="{CHART_X + CHART_W}" y="306" text-anchor="end" font-size="10.5" fill="#8FA1B6">'
@@ -230,8 +220,8 @@ def render() -> str:
         if week["total"] == peak_week and week["total"] > 0:
             peak_index = index
         out.append(
-            f'<rect class="wv" x="{bar_x:.1f}" y="{bar_y:.1f}" width="{bar_w:.1f}" height="{bar_h:.1f}" '
-            f'rx="1.4" fill="{color}" style="animation-delay:{index * 0.012:.2f}s"/>'
+            f'<rect x="{bar_x:.1f}" y="{bar_y:.1f}" width="{bar_w:.1f}" height="{bar_h:.1f}" '
+            f'rx="1.4" fill="{color}"/>'
         )
         label = month_labels.get(index)
         if label:
@@ -242,7 +232,7 @@ def render() -> str:
             )
     if peak_index >= 0:
         px = CHART_X + peak_index * (bar_w + bar_gap) + bar_w / 2
-        out.append(f'<circle class="pulse" cx="{px:.1f}" cy="{CHART_BASE - CHART_H - 12:.1f}" r="3.2" fill="#FFC857"/>')
+        out.append(f'<circle cx="{px:.1f}" cy="{CHART_BASE - CHART_H - 12:.1f}" r="3.2" fill="#FFC857"/>')
     out.append("</g>")
 
     # footer line
@@ -250,7 +240,7 @@ def render() -> str:
     status_color = "#C08A1E" if cached else "#6C9FE0"
     out.append(f'<rect x="{M}" y="520" width="{CONTENT_W}" height="1" fill="#1E2C48" fill-opacity=".7"/>')
     out.append(f'<text class="m" x="56" y="550" font-size="11" fill="#8FA1B6">{public_repos} public repos · {followers} followers · {following} following · member since {member_since}</text>')
-    out.append(f'<circle class="pulse" cx="760" cy="546" r="3" fill="{status_color}"/>')
+    out.append(f'<circle cx="760" cy="546" r="3" fill="{status_color}"/>')
     out.append(f'<text class="m" x="772" y="550" font-size="11" fill="{status_color}">{status}</text>')
     out.append(f'<text class="m" x="1224" y="550" text-anchor="end" font-size="11" fill="#6D7E94">github.com/{esc(USER)}</text>')
 
