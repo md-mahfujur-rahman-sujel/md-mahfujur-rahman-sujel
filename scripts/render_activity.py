@@ -30,10 +30,9 @@ BADGES = {
 }
 
 FALLBACK = [
-    {"type": "PublicEvent", "repo": "Apex-Arcade", "text": "published repository to public", "at": "2026-10-21T12:38:37Z"},
-    {"type": "PushEvent", "repo": "Unrot", "text": "pushed 3 commits", "at": "2026-10-22T17:57:53Z"},
-    {"type": "CreateEvent", "repo": "Unrot", "text": "created branch main", "at": "2026-10-27T03:11:22Z"},
-    {"type": "PushEvent", "repo": "Unrot", "text": "pushed 2 commits", "at": "2026-10-27T03:17:44Z"},
+    {"type": "PushEvent", "repo": "University-Intelligent-Timetable-Generator", "text": "pushed 1 commit", "at": "2026-11-16T13:56:00Z"},
+    {"type": "PushEvent", "repo": "Game-Idea", "text": "pushed 1 commit", "at": "2026-11-15T17:18:00Z"},
+    {"type": "PushEvent", "repo": "Game-Idea", "text": "pushed 1 commit", "at": "2026-11-15T17:00:00Z"},
 ]
 
 # Panel SVGs are rasterized by GitHub's mobile client as <img>; CSS keyframe

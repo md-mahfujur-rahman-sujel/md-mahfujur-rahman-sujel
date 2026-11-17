@@ -6,14 +6,13 @@
 
 </div>
 
-Your friendly neighborhood developer. BSc in Computer Science & Engineering at East West University, Dhaka — I take product ideas end to end, from the first sketch in Figma to a shipped React, Spring Boot or Android release.
+Computer Science & Engineering student at East West University (EWU), Bangladesh. I’m interested in software engineering and UI/UX, and enjoy turning product ideas into simple, useful apps. I’m working toward building products of my own through tech entrepreneurship.
 
 ## Selected work
 
 <p align="center">
-<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><img src="./assets/project-apex-v6.svg" width="32%" alt="Apex Arcade — React launcher for 50 browser games" /></a>
-<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><img src="./assets/project-unrot-v6.svg" width="32%" alt="Unrot — Android app blocker with a focus timer" /></a>
-<a href="https://github.com/masum-mir/Oppzy"><img src="./assets/project-oppzy-v6.svg" width="32%" alt="Oppzy — internship and research matching platform" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><img src="./assets/project-unrot-v6.svg" width="48%" alt="Unrot — Android app blocker with a focus timer" /></a>
+<a href="https://github.com/masum-mir/Oppzy"><img src="./assets/project-oppzy-v6.svg" width="48%" alt="Oppzy — internship and research matching platform" /></a>
 </p>
 
 ## Arsenal
@@ -26,7 +25,7 @@ Your friendly neighborhood developer. BSc in Computer Science & Engineering at E
 
 ## Case files
 
-<a href="https://github.com/md-mahfujur-rahman-sujel?tab=repositories"><img src="./assets/repos.svg" width="100%" alt="Live repository index for Apex Arcade, Unrot and Oppzy" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel?tab=repositories"><img src="./assets/repos.svg" width="100%" alt="Live repository index for Unrot and Oppzy" /></a>
 
 ## Signals
 

@@ -17,22 +17,14 @@ from common import (
     stamp,
 )
 
-W, H = 1280, 480
+W, H = 1280, 388
 M = 56.0
 CONTENT_W = W - M * 2
 ROW_TOP = 146.0
 ROW_H = 92.0
-ROWS = 3
+ROWS = 2
 
 REPOS = [
-    {
-        "full": "md-mahfujur-rahman-sujel/Apex-Arcade",
-        "name": "Apex Arcade",
-        "accent": "#FF6B6B",
-        "kind": "web",
-        "fallback_desc": "React launcher for 50 browser games with history, favorites and score cards.",
-        "fallback_lang": "HTML",
-    },
     {
         "full": "md-mahfujur-rahman-sujel/Unrot",
         "name": "Unrot",
@@ -114,7 +106,7 @@ def render() -> str:
     out.append('<text class="s" x="56" y="106" font-size="32" font-weight="800" letter-spacing="-.4" fill="#F5F8FC">Case files</text>')
     out.append(
         f'<text class="m" x="1224" y="52" text-anchor="end" font-size="10.5" fill="#8FA1B6">'
-        f'{len(repos):02d} PUBLIC · {owned:02d} OWNED · {collab:02d} COLLAB · {len(languages):02d} LANGUAGES</text>'
+        f'{len(repos):02d} FEATURED · {owned:02d} OWNED · {collab:02d} COLLAB · {len(languages):02d} LANGUAGES</text>'
     )
     out.append(f'<text class="m" x="1224" y="106" text-anchor="end" font-size="10.5" fill="#6D7E94">{esc(stamp(now))}</text>')
     out.append(f'<rect x="{M}" y="124" width="{CONTENT_W}" height="1" fill="#1E2C48" fill-opacity=".8"/>')
@@ -137,7 +129,7 @@ def render() -> str:
             f'<text class="m" x="{M + 36}" y="{y + 80:.1f}" font-size="10.5" letter-spacing="1.2" fill="#6D7E94">'
             f'<tspan fill="#B6C3D4">{esc(clip(repo["language"], 14)).upper()}</tspan> · {esc(repo["owner"])} · {ownership} · {esc(repo["kind"].upper())}</text>'
         )
-        out.append(f'<text class="m" x="1224" y="{y + 34:.1f}" text-anchor="end" font-size="11" letter-spacing="1.4" fill="{accent}">OPEN REPOSITORY ↗</text>')
+        out.append(f'<text class="m" x="1224" y="{y + 34:.1f}" text-anchor="end" font-size="11" letter-spacing="1.4" fill="{accent}">FEATURED PROJECT</text>')
         out.append(f'<text class="m" x="1224" y="{y + 58:.1f}" text-anchor="end" font-size="11.5" fill="#8FA1B6">★ {repo["stars"]:02d} · FORKS {repo["forks"]:02d}</text>')
         out.append(f'<text class="m" x="1224" y="{y + 80:.1f}" text-anchor="end" font-size="10.5" letter-spacing="1" fill="#6D7E94">UPDATED {esc(updated)}</text>')
         out.append("</g>")
