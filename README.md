@@ -11,6 +11,8 @@ Computer Science & Engineering student at East West University (EWU), Bangladesh
 ## Selected work
 
 <p align="center">
+<a href="https://github.com/md-mahfujur-rahman-sujel/TeleLink"><img src="./assets/project-telelink-v1.svg" width="48%" alt="TeleLink — local-network Android TV remote system" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel/Apex-Arcade"><img src="./assets/project-apex-v6.svg" width="48%" alt="Apex Arcade — browser arcade with 50 games" /></a>
 <a href="https://github.com/md-mahfujur-rahman-sujel/Unrot"><img src="./assets/project-unrot-v6.svg" width="48%" alt="Unrot — Android app blocker with a focus timer" /></a>
 <a href="https://github.com/masum-mir/Oppzy"><img src="./assets/project-oppzy-v6.svg" width="48%" alt="Oppzy — internship and research matching platform" /></a>
 </p>
@@ -25,7 +27,7 @@ Computer Science & Engineering student at East West University (EWU), Bangladesh
 
 ## Case files
 
-<a href="https://github.com/md-mahfujur-rahman-sujel?tab=repositories"><img src="./assets/repos.svg" width="100%" alt="Live repository index for Unrot and Oppzy" /></a>
+<a href="https://github.com/md-mahfujur-rahman-sujel?tab=repositories"><img src="./assets/repos.svg" width="100%" alt="Live repository index for TeleLink, Apex Arcade, Unrot and Oppzy" /></a>
 
 ## Signals
 

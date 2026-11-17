@@ -17,14 +17,30 @@ from common import (
     stamp,
 )
 
-W, H = 1280, 388
+W, H = 1280, 572
 M = 56.0
 CONTENT_W = W - M * 2
 ROW_TOP = 146.0
 ROW_H = 92.0
-ROWS = 2
+ROWS = 4
 
 REPOS = [
+    {
+        "full": "md-mahfujur-rahman-sujel/TeleLink",
+        "name": "TeleLink",
+        "accent": "#6C9FE0",
+        "kind": "android",
+        "fallback_desc": "Local-network phone-to-TV remote system for Android TV.",
+        "fallback_lang": "Kotlin",
+    },
+    {
+        "full": "md-mahfujur-rahman-sujel/Apex-Arcade",
+        "name": "Apex Arcade",
+        "accent": "#FF6B6B",
+        "kind": "web",
+        "fallback_desc": "Browser arcade with 50 games, previews, favorites, and play history.",
+        "fallback_lang": "HTML",
+    },
     {
         "full": "md-mahfujur-rahman-sujel/Unrot",
         "name": "Unrot",
